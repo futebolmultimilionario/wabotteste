@@ -7,8 +7,8 @@
 
         $updateArray = json_decode($update, TRUE);
 	
-	if ($updateArray["messages"][99]["chatId"] == "5511948010386-1552934954@g.us") {
-        	$texten = $updateArray["messages"][99]["body"];
+	if ($updateArray["messages"]["chatId"] == "5511948010386-1553542475@g.us") {
+        	$texten = $updateArray["messages"]["body"];
         	$text = urlencode($texten);
         	file_get_contents($APIurl."sendMessage?token=".$token."&chatId=558398858522-1568030251@g.us&body=".$text);
 	} else {
