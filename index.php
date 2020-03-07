@@ -3,7 +3,7 @@
         $token = 'oo80b8hpghlw5y58';
 
         // $update = file_get_contents("php://input");
-	$update = file_get_contents($APIurl."messages?token=".$token."&chatId=5511948010386-1552934954@g.us&last");
+	$update = file_get_contents($APIurl."messages?token=".$token."&last");
 
         $updateArray = json_decode($update, TRUE);
 	
