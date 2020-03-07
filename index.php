@@ -2,8 +2,8 @@
         $APIurl = 'https://eu2.chat-api.com/instance104918/';
         $token = 'oo80b8hpghlw5y58';
 
-        // $update = file_get_contents("php://input");
-	$update = file_get_contents($APIurl."messages?token=".$token."&last");
+        $update = file_get_contents("php://input");
+	// $update = file_get_contents($APIurl."messages?token=".$token."&last");
 
         $updateArray = json_decode($update, TRUE);
 	
