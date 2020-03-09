@@ -7,7 +7,7 @@
 
         $updateArray = json_decode($update, TRUE);
 	
-	if ($updateArray["messages"][0]["chatId"] == "558399711150-1558430352@g.us") {
+	if ($updateArray["messages"][0]["chatId"] == "5511948010386-1552934954@g.us") {
           if($updateArray["messages"][0]["type"] == "chat") {
             $texten = $updateArray["messages"][0]["body"];
         	  $text = urlencode($texten);
