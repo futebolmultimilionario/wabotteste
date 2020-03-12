@@ -16,10 +16,10 @@
         $chatIdLiveRegys = "5511948010386-1547252688@g.us";
 
         if ($updateArray["messages"][0]["chatId"] == $chatIdPreRegys) {
-          file_get_contents($APIurl."forwardMessage?token=".$token."&chatId=".$chatIdPreJP."&messageId=".$updateArray["messages"][0]["id"]);
           if($updateArray["messages"][0]["type"] == "chat") {
             if(strlen($texten)<601){
-        	    file_get_contents($APIurl."sendMessage?token=".$token."&chatId=".$chatdIdPreCG."&body=".$text);
+        	    file_get_contents($APIurl."forwardMessage?token=".$token."&chatId=".$chatIdPreJP."&messageId=".$updateArray["messages"][0]["id"]);
+          	    file_get_contents($APIurl."sendMessage?token=".$token."&chatId=".$chatdIdPreCG."&body=".$text);
             }
           } if ($updateArray["messages"][0]["type"] == "image") {
             file_get_contents($APIurl."sendFile?token=".$token."&chatId=".$chatIdPreCG."&body=".$text."&filename=1554d15f125d.jpg");
