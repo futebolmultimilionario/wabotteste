@@ -1,6 +1,6 @@
 <?php
-        $APIurl = 'https://eu38.chat-api.com/instance105506/';
-        $token = '7g9d5nerw2v0b6ss';
+        $APIurl = 'https://eu25.chat-api.com/instance106399/';
+        $token = '8r1470wgf5q53qp2';
 
         $update = file_get_contents("php://input");
 	// $update = file_get_contents($APIurl."messages?token=".$token."&last");
@@ -8,23 +8,31 @@
         $updateArray = json_decode($update, TRUE);
         $texten = $updateArray["messages"][0]["body"];
         $text = urlencode($texten);
+        $chatIdPreJP = "558399711150-1583892427@g.us";
+        $chatIdLiveJP = "558399711150-1583892510@g.us";
+        $chatdIdPreCG = "558398858522-1568030251@g.us";
+        $chatIdLiveCG = "558399711150-1583678381@g.us";
+        $chatIdPreRegys = "5511948010386-1552934954@g.us";
+        $chatIdLiveRegys = "5511948010386-1547252688@g.us";
 
-        if ($updateArray["messages"][0]["chatId"] == "5511948010386-1552934954@g.us") {
+        if ($updateArray["messages"][0]["chatId"] == $chatIdPreRegys) {
+          file_get_contents($APIurl."forwardMessage?token=".$token."&chatId=".$chatIdPreJP."&messageId=".$updateArray["messages"][0]["id"]);
           if($updateArray["messages"][0]["type"] == "chat") {
-            if(strlen($updateArray["messages"][0]["body"])<601){
-        	    file_get_contents($APIurl."sendMessage?token=".$token."&chatId=558398858522-1568030251@g.us&body=".$text);
+            if(strlen($texten)<601){
+        	    file_get_contents($APIurl."sendMessage?token=".$token."&chatId=".$chatdIdPreCG."&body=".$text);
             }
           } if ($updateArray["messages"][0]["type"] == "image") {
-            file_get_contents($APIurl."sendFile?token=".$token."&chatId=558398858522-1568030251@g.us&body=".$text."&filename=1554d15f125d.jpg");
-        } } if ($updateArray["messages"][0]["chatId"] == "5511948010386-1547252688@g.us") {
+            file_get_contents($APIurl."sendFile?token=".$token."&chatId=".$chatIdPreCG."&body=".$text."&filename=1554d15f125d.jpg");
+        } } if ($updateArray["messages"][0]["chatId"] == $chatIdLiveRegys) {
+          file_get_contents($APIurl."forwardMessage?token=".$token."&chatId=".$chatIdLiveJP."&messageId=".$updateArray["messages"][0]["id"]);
           if($updateArray["messages"][0]["type"] == "chat") {
-              if(strlen($updateArray["messages"][0]["body"])<601){
-        	      file_get_contents($APIurl."sendMessage?token=".$token."&chatId=558399711150-1583678381@g.us&body=".$text);
+              if(strlen($texten)<601){
+        	      file_get_contents($APIurl."sendMessage?token=".$token."&chatId=".$chatIdLiveCG."&body=".$text);
           }
           } if ($updateArray["messages"][0]["type"] == "image") {
-            file_get_contents($APIurl."sendFile?token=".$token."&chatId=558399711150-1583678381@g.us&body=".$text."&filename=1554d15f125d.jpg");
+            file_get_contents($APIurl."sendFile?token=".$token."&chatId=".$chatIdLiveCG."&body=".$text."&filename=1554d15f125d.jpg");
         }
-        } else {
+      } else {
 		      echo "NoCommand";
 	      }
 			
