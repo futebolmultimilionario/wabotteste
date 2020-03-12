@@ -6,7 +6,7 @@
 	// $update = file_get_contents($APIurl."messages?token=".$token."&last");
 
         $updateArray = json_decode($update, TRUE);
-	$text = urlencode($updateArray);
+	//$text = urlencode($updateArray);
         //$texten = $updateArray["messages"][0]["body"];
         //$text = urlencode($texten);
         $chatIdPreJP = "558399711150-1583892427@g.us";
@@ -20,7 +20,7 @@
         	// file_get_contents($APIurl."forwardMessage?token=".$token."&chatId=".$chatIdPreJP."&messageId=".$updateArray["messages"][0]["id"]);
         	//if($updateArray["messages"][0]["type"] == "chat") {
         		//if(strlen($texten)<601){
-        			file_get_contents($APIurl."sendMessage?token=".$token."&chatId=".$chatIdPreJP."&body=".$text);
+        			file_get_contents($APIurl."sendMessage?token=".$token."&chatId=".$chatIdPreJP."&body=".$updateArray);
         		/*}
         	}
 		if ($updateArray["messages"][0]["type"] == "image") {
