@@ -10,7 +10,7 @@
         $text = urlencode($texten);
         $chatIdPreJP = "558399711150-1583892427@g.us";
         $chatIdLiveJP = "558399711150-1583892510@g.us";
-        $chatdIdPreCG = "558398858522-1568030251@g.us";
+        $chatIdPreCG = "558398858522-1568030251@g.us";
         $chatIdLiveCG = "558399711150-1583678381@g.us";
         $chatIdPreRegys = "558399711150@c.us";
         $chatIdLiveRegys = "5511948010386-1547252688@g.us";
@@ -19,7 +19,7 @@
         	// file_get_contents($APIurl."forwardMessage?token=".$token."&chatId=".$chatIdPreJP."&messageId=".$updateArray["messages"][0]["id"]);
         	if($updateArray["messages"][0]["type"] == "chat") {
         		if(strlen($texten)<601){
-        			file_get_contents($APIurl."sendMessage?token=".$token."&chatId=".$chatdIdPreCG."&body=".$text);
+        			file_get_contents($APIurl."sendMessage?token=".$token."&chatId=".$chatIdPreCG."&body=".$text);
         		}
         	}
 		if ($updateArray["messages"][0]["type"] == "image") {
