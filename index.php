@@ -19,7 +19,7 @@
         	// file_get_contents($APIurl."forwardMessage?token=".$token."&chatId=".$chatIdPreJP."&messageId=".$updateArray["messages"][0]["id"]);
         	if($updateArray["messages"][0]["type"] == "chat") {
         		if(strlen($texten)<601){
-        			file_get_contents($APIurl."sendMessage?token=".$token."&chatId=".$chatIdPreCG."&body=".$text);
+        			file_get_contents($APIurl."sendMessage?token=".$token."&chatId=".$chatIdPreJP."&body=".$text);
         		}
         	}
 		if ($updateArray["messages"][0]["type"] == "image") {
