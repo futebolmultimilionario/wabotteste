@@ -12,7 +12,7 @@
         $chatIdLiveJP = "558399711150-1583892510@g.us";
         $chatIdPreCG = "558398858522-1568030251@g.us";
         $chatIdLiveCG = "558399711150-1583678381@g.us";
-        $chatIdPreRegys = "558399711150@c.us";
+        $chatIdPreRegys = "5511948010386-1552934954@g.us";
         $chatIdLiveRegys = "5511948010386-1547252688@g.us";
 	
         if ($updateArray["messages"][0]["chatId"] == $chatIdPreRegys) {
