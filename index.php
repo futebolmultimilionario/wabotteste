@@ -19,8 +19,7 @@
         	// file_get_contents($APIurl."forwardMessage?token=".$token."&chatId=".$chatIdPreJP."&messageId=".$updateArray["messages"][0]["id"]);
         	if($updateArray["messages"][0]["type"] == "chat") {
         		if(strlen($texten)<601){
-        			// file_get_contents($APIurl."sendMessage?token=".$token."&chatId=".$chatdIdPreCG."&body=".$text);
-        			file_get_contents($APIurl."forwardMessage?token=".$token."&chatId=".$chatIdPreCG."&messageId=".$updateArray["messages"][0]["id"]);
+        			file_get_contents($APIurl."sendMessage?token=".$token."&chatId=".$chatdIdPreJP."&body=".$text);
         		}
         	}
 		if ($updateArray["messages"][0]["type"] == "image") {
