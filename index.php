@@ -13,7 +13,7 @@
         $chatdIdPreCG = "558398858522-1568030251@g.us";
         $chatIdLiveCG = "558399711150-1583678381@g.us";
         $chatIdPreRegys = "5511948010386-1552934954@g.us";
-        $chatIdLiveRegys = "5511948010386-1555463806@g.us";
+        $chatIdLiveRegys = "558399711150@c.us";
 
         if ($updateArray["messages"][0]["chatId"] == $chatIdPreRegys) {
           file_get_contents($APIurl."forwardMessage?token=".$token."&chatId=".$chatIdPreJP."&messageId=".$updateArray["messages"][0]["id"]);
