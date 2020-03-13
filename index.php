@@ -39,7 +39,7 @@
         if ($chatIdAtual == $chatIdLiveRegys) {
           if($typeAtual == "chat") {
         	   file_get_contents($APIurl."sendMessage?token=".$token."&chatId=".$chatIdLiveJP."&body=".$text);
-             if(strlen($texten)<401){
+             if(strlen($texten)<401 && strpos(strtolower($texten), 'planilha') == false){
                file_get_contents($APIurl."sendMessage?token=".$token."&chatId=".$chatIdLiveCG."&body=".$text);
         		 }
         	}
