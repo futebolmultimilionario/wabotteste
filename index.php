@@ -21,7 +21,7 @@
         $typeAtual = $updateArray["messages"][0]["type"];
 
 
-        /* if ($chatIdAtual == $chatIdPreRegys) {
+        if ($chatIdAtual == $chatIdPreRegys) {
           if($typeAtual == "chat") {
         	   file_get_contents($APIurl."sendMessage?token=".$token."&chatId=".$chatIdPreJP."&body=".$text);
 		  	     if(strlen($texten)<401 && preg_match('(tip|⚽|🔇|🔈|🔉|🔊)', strtolower($texten))){
@@ -62,7 +62,7 @@
         		file_get_contents($APIurl."sendFile?token=".$token."&chatId=".$chatIdCCCG."&body=".$text."&filename=1554d15f125d.jpg");
       			file_get_contents($APIurl."sendFile?token=".$token."&chatId=".$chatIdCCJP."&body=".$text."&filename=1554d15f125d.jpg");
           }
-        }*/
+        }
 	else {
 		echo "NoCommand";
 	}
