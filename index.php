@@ -16,7 +16,8 @@
         $chatIdCCCG = "558399711150-1583854681@g.us";
         $chatIdPreRegys = "5511948010386-1552934954@g.us";
         $chatIdLiveRegys = "5511948010386-1555463806@g.us";
-        $chatIdCarioca = "idcarioca";
+        $chatIdCarioca = "13132868060-1537971803@g.us";
+	$chatIdCarioca2 = "idCarioca2";
         $chatIdAtual = $updateArray["messages"][0]["chatId"];
         $typeAtual = $updateArray["messages"][0]["type"];
 
@@ -51,7 +52,7 @@
         	   file_get_contents($APIurl."sendFile?token=".$token."&chatId=".$chatIdLiveJP."&body=".$text."&filename=1554d15f125d.jpg");
         	}
         }
-        if ($chatIdAtual == $chatIdCarioca) {
+        if ($chatIdAtual == $chatIdCarioca || $chatIdAtual == $chatIdCarioca2) {
           if($typeAtual == "chat") {
         	   file_get_contents($APIurl."sendMessage?token=".$token."&chatId=".$chatIdCCJP."&body=".$text);
              if(strlen($texten)<401){
