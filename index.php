@@ -17,7 +17,7 @@
         $chatIdPreRegys = "5511948010386-1552934954@g.us";
         $chatIdLiveRegys = "5511948010386-1555463806@g.us";
         $chatIdCarioca = "13132868060-1537971803@g.us";
-	$chatIdCarioca2 = "idCarioca2";
+	$chatIdCarioca2 = "558581122630-1578659806@g.us";
         $chatIdAtual = $updateArray["messages"][0]["chatId"];
         $typeAtual = $updateArray["messages"][0]["type"];
 
