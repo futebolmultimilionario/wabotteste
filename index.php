@@ -60,7 +60,7 @@
         		file_get_contents($APIurl."sendFile?token=".$token."&chatId=".$chatIdGalgosUKJP."&body=".$text."&filename=1554d15f125d.jpg");
           }
         }
-	if ($chatIdAtual == $chatIdGalgosUSAJP) {
+	if ($chatIdAtual == $chatIdGalgosUSA) {
           if($typeAtual == "chat") {
         	   file_get_contents($APIurl."sendMessage?token=".$token."&chatId=".$chatIdGalgosUSAJP."&body=".$text);
              }
