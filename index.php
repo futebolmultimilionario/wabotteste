@@ -21,7 +21,7 @@
         $chatIdAtual = $updateArray["messages"][0]["chatId"];
         $typeAtual = $updateArray["messages"][0]["type"];
 
-	/*
+	
         if ($chatIdAtual == $chatIdPreRegys) {
           if($typeAtual == "chat") {
         	   file_get_contents($APIurl."sendMessage?token=".$token."&chatId=".$chatIdPreJP."&body=".$text);
@@ -67,7 +67,7 @@
           if ($typeAtual == "image") {
         		file_get_contents($APIurl."sendFile?token=".$token."&chatId=".$chatIdGalgosUSAJP."&body=".$text."&filename=1554d15f125d.jpg");
           }
-        }*/
+        }
 	else {
 		echo "NoCommand";
 	}
