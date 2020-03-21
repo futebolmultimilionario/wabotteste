@@ -1,6 +1,6 @@
 <?php
-        $APIurl = 'https://eu68.chat-api.com/instance108044/';
-        $token = 'j0hq6w8henjmxk9x';
+        $APIurl = 'https://eu92.chat-api.com/instance109037/';
+        $token = 'ddxf82yr716xzoh9';
 
         $update = file_get_contents("php://input");
 	// $update = file_get_contents($APIurl."messages?token=".$token."&last");
@@ -21,7 +21,7 @@
         $chatIdAtual = $updateArray["messages"][0]["chatId"];
         $typeAtual = $updateArray["messages"][0]["type"];
 
-
+	/*
         if ($chatIdAtual == $chatIdPreRegys) {
           if($typeAtual == "chat") {
         	   file_get_contents($APIurl."sendMessage?token=".$token."&chatId=".$chatIdPreJP."&body=".$text);
@@ -67,7 +67,7 @@
           if ($typeAtual == "image") {
         		file_get_contents($APIurl."sendFile?token=".$token."&chatId=".$chatIdGalgosUSAJP."&body=".$text."&filename=1554d15f125d.jpg");
           }
-        }
+        }*/
 	else {
 		echo "NoCommand";
 	}
