@@ -14,6 +14,7 @@
         $chatIdLiveCG = "558399711150-1583678381@g.us";
         $chatIdGalgosUKJP = "558399711150-1583892552@g.us";
         $chatIdGalgosUSAJP = "558399711150-1583854681@g.us";
+	$chatIdDiretoria = "558399711150-1583810992@g.us";
         $chatIdPreRegys = "5511948010386-1552934954@g.us";
         $chatIdLiveRegys = "5511948010386-1555463806@g.us";
         $chatIdGalgosUK = "13132868060-1537971803@g.us";
@@ -67,6 +68,23 @@
           if ($typeAtual == "image") {
         		file_get_contents($APIurl."sendFile?token=".$token."&chatId=".$chatIdGalgosUSAJP."&body=".$text."&filename=1554d15f125d.jpg");
           }
+        }
+	if ($chatIdAtual == $chatIdDiretoria) {
+          if($texten == "UK ✅✅✅") {
+		   texten = "✅✅✅";
+        	   file_get_contents($APIurl."sendMessage?token=".$token."&chatId=".$chatIdGalgosUKJP."&body=".$text);
+             }
+          if ($texten == "UK ✖") {
+		   texten = "✖";
+        	   file_get_contents($APIurl."sendMessage?token=".$token."&chatId=".$chatIdGalgosUKJP."&body=".$text);
+	  }
+	  if($texten == "USA ✅✅✅") {
+		   texten = "✅✅✅";
+        	   file_get_contents($APIurl."sendMessage?token=".$token."&chatId=".$chatIdGalgosUSAJP."&body=".$text);
+             }
+          if ($texten == "USA ✖") {
+		   texten = "✖";
+        	   file_get_contents($APIurl."sendMessage?token=".$token."&chatId=".$chatIdGalgosUSAJP."&body=".$text); }
         }
 	else {
 		echo "NoCommand";
