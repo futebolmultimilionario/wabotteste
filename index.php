@@ -71,19 +71,19 @@
         }
 	if ($chatIdAtual == $chatIdDiretoria) {
           if($texten == "UK ✅✅✅") {
-		   texten = "✅✅✅";
+		   $text = urlencode("✅✅✅");
         	   file_get_contents($APIurl."sendMessage?token=".$token."&chatId=".$chatIdGalgosUKJP."&body=".$text);
              }
           if ($texten == "UK ✖") {
-		   texten = "✖";
+		   $text = urlencode("✖");
         	   file_get_contents($APIurl."sendMessage?token=".$token."&chatId=".$chatIdGalgosUKJP."&body=".$text);
 	  }
 	  if($texten == "USA ✅✅✅") {
-		   texten = "✅✅✅";
+		   $text = urlencode("✅✅✅");
         	   file_get_contents($APIurl."sendMessage?token=".$token."&chatId=".$chatIdGalgosUSAJP."&body=".$text);
              }
           if ($texten == "USA ✖") {
-		   texten = "✖";
+		   $text = urlencode("✖");
         	   file_get_contents($APIurl."sendMessage?token=".$token."&chatId=".$chatIdGalgosUSAJP."&body=".$text); }
         }
 	else {
