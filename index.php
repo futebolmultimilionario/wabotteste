@@ -1,6 +1,6 @@
 <?php
-        $APIurl = 'https://eu92.chat-api.com/instance110138/';
-        $token = 'qgsgx021jozumbq0';
+        $APIurl = 'https://eu12.chat-api.com/instance110325/';
+        $token = 'vvz2wwy7qvqefrr8';
 
         $update = file_get_contents("php://input");
 	// $update = file_get_contents($APIurl."messages?token=".$token."&last");
@@ -84,8 +84,7 @@
              }
           if ($texten == "USA ✖") {
 		   $text = urlencode("✖");
-        	   //file_get_contents($APIurl."sendMessage?token=".$token."&chatId=".$chatIdGalgosUSAJP."&body=".$text);
-		   file_get_contents($APIurl."sendMessage?token=".$token."&chatId=558399711150@c.us&body=".$text);
+        	   file_get_contents($APIurl."sendMessage?token=".$token."&chatId=".$chatIdGalgosUSAJP."&body=".$text);
 	  }
         }
 	else {
