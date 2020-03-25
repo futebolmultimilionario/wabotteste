@@ -23,7 +23,7 @@
         $typeAtual = $updateArray["messages"][0]["type"];
 
 	
-        if ($chatIdAtual == $chatIdPreRegys) {
+        /*if ($chatIdAtual == $chatIdPreRegys) {
           if($typeAtual == "chat") {
         	   file_get_contents($APIurl."sendMessage?token=".$token."&chatId=".$chatIdPreJP."&body=".$text);
 		  	     if(strlen($texten)<401 && preg_match('(tip|⚽|🔇|🔈|🔉|🔊)', strtolower($texten))){
@@ -88,7 +88,7 @@
         }
 	else {
 		echo "NoCommand";
-	}
+	}*/
 			
 ?>
 
