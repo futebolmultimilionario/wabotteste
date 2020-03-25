@@ -84,7 +84,9 @@
              }
           if ($texten == "USA ✖") {
 		   $text = urlencode("✖");
-        	   file_get_contents($APIurl."sendMessage?token=".$token."&chatId=".$chatIdGalgosUSAJP."&body=".$text); }
+        	   //file_get_contents($APIurl."sendMessage?token=".$token."&chatId=".$chatIdGalgosUSAJP."&body=".$text);
+		   file_get_contents($APIurl."sendMessage?token=".$token."&chatId=558399711150@c.us&body=".$text);
+	  }
         }
 	else {
 		echo "NoCommand";
