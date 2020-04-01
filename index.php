@@ -66,7 +66,7 @@
         		file_get_contents($APIurl."sendFile?token=".$token."&chatId=".$chatIdGalgosUKJP."&body=".$text."&filename=1554d15f125d.jpg&caption=".$caption);
           }
         }
-	if ($chatIdAtual == $chatIdGalgosUSA || $chatIdAtual == $chatIdGalgosChat) {
+	if ($chatIdAtual == $chatIdGalgosUSA) {
 	  if ($chatIdAtual == $chatIdGalgosUSA || $autor == "5521992772410@c.us" || $autor == "554891241411@c.us"){
           	if($typeAtual == "chat") {
         	   	file_get_contents($APIurl."sendMessage?token=".$token."&chatId=".$chatIdGalgosUSAJP."&body=".$text);
