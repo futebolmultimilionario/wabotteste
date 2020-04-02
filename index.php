@@ -27,7 +27,7 @@
 		$caption = urlencode($updateArray["messages"][0]["caption"]);
 	}
 
-	
+	/*
         if ($chatIdAtual == $chatIdPreRegys) {
           if($typeAtual == "chat") {
         	   file_get_contents($APIurl."sendMessage?token=".$token."&chatId=".$chatIdPreJP."&body=".$text);
@@ -96,7 +96,7 @@
         }
 	else {
 		echo "NoCommand";
-	}
+	}*/
 			
 ?>
 
