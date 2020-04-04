@@ -23,6 +23,7 @@
 	$chatIdGalgosChat = "13132868060-1537973869@g.us";
         $chatIdAtual = $updateArray["messages"][0]["chatId"];
         $typeAtual = $updateArray["messages"][0]["type"];
+	$dados = "";
 	if ($typeAtual == "image") {
 		$caption = urlencode($updateArray["messages"][0]["caption"]);
 	}
@@ -97,7 +98,9 @@
 	else {
 		echo "NoCommand";
 	}
+	if ($dados != ""){
 	file_put_contents('input_requests.txt',$dados.PHP_EOL,FILE_APPEND);
+	}
 			
 ?>
 
