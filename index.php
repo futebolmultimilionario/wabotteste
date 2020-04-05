@@ -1,6 +1,6 @@
 <?php
-        $APIurl = 'https://eu68.chat-api.com/instance112674/';
-        $token = 'brv723cacirbn1r9';
+        $APIurl = 'https://eu79.chat-api.com/instance113686/';
+        $token = '8v6976pbdhiszc9e';
 
         $update = file_get_contents("php://input");
 	// $update = file_get_contents($APIurl."messages?token=".$token."&last");
@@ -29,7 +29,7 @@
 	}
 
 	
-        /*if ($chatIdAtual == $chatIdPreRegys) {
+        if ($chatIdAtual == $chatIdPreRegys) {
           if($typeAtual == "chat") {
         	   $dados = file_get_contents($APIurl."sendMessage?token=".$token."&chatId=".$chatIdPreJP."&body=".$text);
 		  	     if(strlen($texten)<401 && preg_match('(tip|⚽|🔇|🔈|🔉|🔊)', strtolower($texten))){
@@ -100,7 +100,7 @@
 	}
 	if ($dados != ""){
 	file_put_contents('input_requests.txt',$dados.PHP_EOL,FILE_APPEND);
-	}*/
+	}
 			
 ?>
 
