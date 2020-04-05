@@ -29,7 +29,7 @@
 	}
 
 	
-        if ($chatIdAtual == $chatIdPreRegys) {
+        /*if ($chatIdAtual == $chatIdPreRegys) {
           if($typeAtual == "chat") {
         	   $dados = file_get_contents($APIurl."sendMessage?token=".$token."&chatId=".$chatIdPreJP."&body=".$text);
 		  	     if(strlen($texten)<401 && preg_match('(tip|⚽|🔇|🔈|🔉|🔊)', strtolower($texten))){
@@ -100,7 +100,7 @@
 	}
 	if ($dados != ""){
 	file_put_contents('input_requests.txt',$dados.PHP_EOL,FILE_APPEND);
-	}
+	}*/
 			
 ?>
 
