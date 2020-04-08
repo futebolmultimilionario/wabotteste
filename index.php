@@ -98,9 +98,7 @@
 	else {
 		echo "NoCommand";
 	}
-	if ($dados != ""){
-	file_put_contents('input_requests.txt',$dados.PHP_EOL,FILE_APPEND);
-	}
+	file_put_contents('input_requests.log',$update.PHP_EOL,FILE_APPEND);
 			
 ?>
 
