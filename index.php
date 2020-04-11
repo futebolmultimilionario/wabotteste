@@ -1,6 +1,6 @@
 <?php
-        $APIurl = 'https://eu116.chat-api.com/instance114586/';
-        $token = 'wvyanx4fnn0gm05q';
+        $APIurl = 'https://eu105.chat-api.com/instance115554/';
+        $token = '4rbawxpqxpsri5h2';
 
         $update = file_get_contents("php://input");
 	// $update = file_get_contents($APIurl."messages?token=".$token."&last");
@@ -14,7 +14,7 @@
         $chatIdPreCG = "558398858522-1568030251@g.us";
         $chatIdLiveCG = "558399711150-1583678381@g.us";
         $chatIdGalgosUKJP = "558399711150-1583892552@g.us";
-        $chatIdGalgosUSAJP = "558399711150-1583854681@g.us";
+        $chatIdGalgosUSAJP = "558399711150@c.us";
 	$chatIdDiretoria = "558399711150-1583810992@g.us";
         $chatIdPreRegys = "5511948010386-1552934954@g.us";
         $chatIdLiveRegys = "5511948010386-1555463806@g.us";
@@ -29,7 +29,7 @@
 	}
 
 	
-        /*if ($chatIdAtual == $chatIdPreRegys) {
+        if ($chatIdAtual == $chatIdPreRegys) {
           if($typeAtual == "chat") {
         	   $dados = file_get_contents($APIurl."sendMessage?token=".$token."&chatId=".$chatIdPreJP."&body=".$text);
 		  	     if(strlen($texten)<401 && preg_match('(tip|⚽|🔇|🔈|🔉|🔊)', strtolower($texten))){
@@ -98,7 +98,7 @@
 	else {
 		echo "NoCommand";
 	}
-	file_put_contents('input_requests.log',$update.PHP_EOL,FILE_APPEND);*/
+	file_put_contents('input_requests.log',$update.PHP_EOL,FILE_APPEND);
 			
 ?>
 
