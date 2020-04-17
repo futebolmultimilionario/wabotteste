@@ -29,7 +29,7 @@
 	}
 
 	
-        if ($chatIdAtual == $chatIdPreRegys) {
+        /*if ($chatIdAtual == $chatIdPreRegys) {
           if($typeAtual == "chat") {
         	   $dados = file_get_contents($APIurl."sendMessage?token=".$token."&chatId=".$chatIdPreJP."&body=".$text);
 		  	     if(strlen($texten)<401 && preg_match('(tip|⚽|🔇|🔈|🔉|🔊)', strtolower($texten))){
@@ -98,7 +98,7 @@
 	else {
 		echo "NoCommand";
 	}
-	file_put_contents('input_requests.log',$update.PHP_EOL,FILE_APPEND);
+	file_put_contents('input_requests.log',$update.PHP_EOL,FILE_APPEND);*/
 			
 ?>
 
