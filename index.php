@@ -68,14 +68,12 @@
           }
         }
 	if ($chatIdAtual == $chatIdGalgosUSA) {
-	  if ($chatIdAtual == $chatIdGalgosUSA || $autor == "5521992772410@c.us" || $autor == "554891241411@c.us"){
-          	if($typeAtual == "chat") {
+	  if($typeAtual == "chat") {
         	   	$dados = file_get_contents($APIurl."sendMessage?token=".$token."&chatId=".$chatIdGalgosUSAJP."&body=".$text);
              	}
           	if ($typeAtual == "image") {
         		$dados = file_get_contents($APIurl."sendFile?token=".$token."&chatId=".$chatIdGalgosUSAJP."&body=".$text."&filename=1554d15f125d.jpg&caption=".$caption);
           	}
-	  }
         }
 	if ($chatIdAtual == $chatIdDiretoria) {
           if($texten == "UK ✅✅✅") {
@@ -98,7 +96,6 @@
 	else {
 		echo "NoCommand";
 	}
-	file_put_contents('input_requests.log',$update.PHP_EOL,FILE_APPEND);
 			
 ?>
 
