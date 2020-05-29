@@ -13,7 +13,7 @@
         $chatIdLiveJP = "558399711150-1583892510@g.us";
         $chatIdPreCG = "558398858522-1568030251@g.us";
         $chatIdLiveCG = "558399711150-1583678381@g.us";
-        $chatIdGalgosUKJP = "558399711150-1583892552@g.us";
+        $chatIdGalgosUKJP = "558399711150@c.us";
         $chatIdGalgosUSAJP = "558399711150-1583854681@g.us";
 	$chatIdDiretoria = "558399711150-1583810992@g.us";
         $chatIdPreRegys = "5511948010386-1552934954@g.us";
@@ -36,59 +36,65 @@
         		     file_get_contents($APIurl."sendMessage?token=".$token."&chatId=".$chatIdPreCG."&body=".$text);
 			       }
         	}
-          if ($typeAtual == "image") {
+          elseif ($typeAtual == "image") {
         	   $dados = file_get_contents($APIurl."sendFile?token=".$token."&chatId=".$chatIdPreJP."&body=".$text."&filename=1554d15f125d.jpg&caption=".$caption);
         	file_get_contents($APIurl."sendFile?token=".$token."&chatId=".$chatIdPreCG."&body=".$text."&filename=1554d15f125d.jpg&caption=".$caption);
         	   }
-          if ($typeAtual == "document" || $typeAtual == "audio") {
+          elseif ($typeAtual == "document" || $typeAtual == "audio") {
         	   $dados = file_get_contents($APIurl."sendFile?token=".$token."&chatId=".$chatIdPreJP."&body=".$text."&filename=1554d15f125d.jpg");
         	}
         }
-        if ($chatIdAtual == $chatIdLiveRegys) {
+        elseif ($chatIdAtual == $chatIdLiveRegys) {
           if($typeAtual == "chat") {
         	   $dados = file_get_contents($APIurl."sendMessage?token=".$token."&chatId=".$chatIdLiveJP."&body=".$text);
              if(strlen($texten)<401 && strpos(strtolower($texten), 'planilha') == false){
                file_get_contents($APIurl."sendMessage?token=".$token."&chatId=".$chatIdLiveCG."&body=".$text);
         		 }
         	}
-          if ($typeAtual == "image") {
+          elseif ($typeAtual == "image") {
 		  $dados = file_get_contents($APIurl."sendFile?token=".$token."&chatId=".$chatIdLiveJP."&body=".$text."&filename=1554d15f125d.jpg&caption=".$caption);
              	  file_get_contents($APIurl."sendFile?token=".$token."&chatId=".$chatIdLiveCG."&body=".$text."&filename=1554d15f125d.jpg&caption=".$caption);
       			}
-          if ($typeAtual == "document" || $typeAtual == "audio") {
+          elseif ($typeAtual == "document" || $typeAtual == "audio") {
         	   $dados = file_get_contents($APIurl."sendFile?token=".$token."&chatId=".$chatIdLiveJP."&body=".$text."&filename=1554d15f125d.jpg");
         	}
         }
-        if ($chatIdAtual == $chatIdGalgosUK) {
+        elseif ($chatIdAtual == $chatIdGalgosUK) {
           if($typeAtual == "chat") {
         	   $dados = file_get_contents($APIurl."sendMessage?token=".$token."&chatId=".$chatIdGalgosUKJP."&body=".$text);
              }
-          if ($typeAtual == "image") {
+          elseif ($typeAtual == "image") {
         		$dados = file_get_contents($APIurl."sendFile?token=".$token."&chatId=".$chatIdGalgosUKJP."&body=".$text."&filename=1554d15f125d.jpg&caption=".$caption);
           }
+	  elseif ($typeAtual == "document" || $typeAtual == "audio") {
+        	   $dados = file_get_contents($APIurl."sendFile?token=".$token."&chatId=".$chatIdGalgosUKJP."&body=".$text."&filename=1554d15f125d.jpg");
+        	}
         }
-	if ($chatIdAtual == $chatIdGalgosUSA) {
+	elseif ($chatIdAtual == $chatIdGalgosUSA) {
 	  if($typeAtual == "chat") {
         	   	$dados = file_get_contents($APIurl."sendMessage?token=".$token."&chatId=".$chatIdGalgosUSAJP."&body=".$text);
              	}
-          	if ($typeAtual == "image") {
+          	elseif ($typeAtual == "image") {
         		$dados = file_get_contents($APIurl."sendFile?token=".$token."&chatId=".$chatIdGalgosUSAJP."&body=".$text."&filename=1554d15f125d.jpg&caption=".$caption);
           	}
+		elseif ($typeAtual == "document" || $typeAtual == "audio") {
+        	   $dados = file_get_contents($APIurl."sendFile?token=".$token."&chatId=".$chatIdGalgosUSAJP."&body=".$text."&filename=1554d15f125d.jpg");
+        	}
         }
-	if ($chatIdAtual == $chatIdDiretoria) {
+	elseif ($chatIdAtual == $chatIdDiretoria) {
           if($texten == "UK ✅✅✅") {
 		   $text = urlencode("✅✅✅");
         	   $dados = file_get_contents($APIurl."sendMessage?token=".$token."&chatId=".$chatIdGalgosUKJP."&body=".$text);
              }
-          if ($texten == "UK ✖") {
+          elseif ($texten == "UK ✖") {
 		   $text = urlencode("✖");
         	   $dados = file_get_contents($APIurl."sendMessage?token=".$token."&chatId=".$chatIdGalgosUKJP."&body=".$text);
 	  }
-	  if($texten == "USA ✅✅✅") {
+	  elseif($texten == "USA ✅✅✅") {
 		   $text = urlencode("✅✅✅");
         	   $dados = file_get_contents($APIurl."sendMessage?token=".$token."&chatId=".$chatIdGalgosUSAJP."&body=".$text);
              }
-          if ($texten == "USA ✖") {
+          elseif ($texten == "USA ✖") {
 		   $text = urlencode("✖");
         	   $dados = file_get_contents($APIurl."sendMessage?token=".$token."&chatId=".$chatIdGalgosUSAJP."&body=".$text);
 	  }
