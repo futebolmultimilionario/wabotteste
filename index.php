@@ -87,7 +87,7 @@
         	}
         }
 	elseif ($chatIdAtual == $chatIdBurityps) {
-	if($idmsg == "null"){
+	if($idmsg == null){
 	  if($typeAtual == "chat") {
         	   	$dados = file_get_contents($APIurl."sendMessage?token=".$token."&chatId=".$chatIdBuritypsJP."&body=".$text);
              	}
