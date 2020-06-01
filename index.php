@@ -102,6 +102,15 @@
 		file_get_contents($APIurl2."forwardMessage?token=".$token2."&chatId=".$chatIdEncerrar."&messageId=".$idmsg);
 	}
         }
+	elseif ($chatIdAtual == $chatIdEncerrar) {
+          if($typeAtual == "image") {
+		  $menssagens = file_get_contents($APIurl2."messages?token=".$token2."&chatId=".$chatIdEncerrar."&last");
+		  $menssagensArray = json_decode($menssagens, TRUE);
+		  $lmn = count($menssagensArray["messages"]);
+		  file_get_contents($APIurl."sendFile?token=".$token."&chatId=".$chatIdBuritypsJP."&body=".$text."&filename=1554d15f125d.jpg&caption=".$menssagensArray["messages"][lmn-2]["body"]);
+	  }
+	}
+		  
 	elseif ($chatIdAtual == $chatIdDiretoria) {
           if($texten == "UK ✅✅✅") {
 		   $text = urlencode("✅✅✅");
