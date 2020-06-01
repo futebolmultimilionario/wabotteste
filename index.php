@@ -1,6 +1,8 @@
 <?php
         $APIurl = 'https://eu129.chat-api.com/instance133106/';
         $token = '6r5ezl6hsx5w3bs5';
+	$APIurl2 = 'https://eu129.chat-api.com/instance133105/';
+        $token2 = 'wh1utwziajojtoja';
 
         $update = file_get_contents("php://input");
 	// $update = file_get_contents($APIurl."messages?token=".$token."&last");
@@ -20,10 +22,13 @@
         $chatIdLiveRegys = "5511948010386-1555463806@g.us";
         $chatIdGalgosUK = "13132868060-1537971803@g.us";
 	$chatIdGalgosUSA = "558581122630-1578659806@g.us";
-	$chatIdBurityps = "553588495002-1566868456@g.us";
-	$chatIdBuritypsJP = "558399711150-1590499962@g.us";
+	$chatIdBurityps = "558399711150-1583810992@g.us";
+	$chatIdBuritypsJP = "558399711150@c.us";
+	$chatIdEncerrar = "557199039262-1591003488@g.us";
         $chatIdAtual = $updateArray["messages"][0]["chatId"];
         $typeAtual = $updateArray["messages"][0]["type"];
+	$quotedMsg = $updateArray["messages"][0]["quotedMsgBody"];
+	$idmsg = $updateArray["messages"][0]["quotedMsgBody"];
 	$dados = "";
 	if ($typeAtual == "image") {
 		$caption = urlencode($updateArray["messages"][0]["caption"]);
@@ -83,6 +88,7 @@
         	}
         }
 	elseif ($chatIdAtual == $chatIdBurityps) {
+	if($quotedMsg == "null"){
 	  if($typeAtual == "chat") {
         	   	$dados = file_get_contents($APIurl."sendMessage?token=".$token."&chatId=".$chatIdBuritypsJP."&body=".$text);
              	}
@@ -92,6 +98,10 @@
 		elseif ($typeAtual == "document" || $typeAtual == "audio") {
         	   $dados = file_get_contents($APIurl."sendFile?token=".$token."&chatId=".$chatIdBuritypsJP."&body=".$text."&filename=1554d15f125d.jpg");
         	}
+	} else {
+		file_get_contents($APIurl2."sendMessage?token=".$token2."&chatId=".$chatIdEncerrar."&body=".$text);
+		file_get_contents($APIurl2."forwardMessage?token=".$token2."&chatId=".$chatIdEncerrar."&messageId=".$idmsg);
+	}
         }
 	elseif ($chatIdAtual == $chatIdDiretoria) {
           if($texten == "UK ✅✅✅") {
