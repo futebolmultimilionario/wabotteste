@@ -27,8 +27,7 @@
 	$chatIdEncerrar = "557199039262-1591003488@g.us";
         $chatIdAtual = $updateArray["messages"][0]["chatId"];
         $typeAtual = $updateArray["messages"][0]["type"];
-	$quotedMsg = $updateArray["messages"][0]["quotedMsgBody"];
-	$idmsg = $updateArray["messages"][0]["quotedMsgBody"];
+	$idmsg = $updateArray["messages"][0]["quotedMsgId"];
 	$dados = "";
 	if ($typeAtual == "image") {
 		$caption = urlencode($updateArray["messages"][0]["caption"]);
@@ -88,7 +87,7 @@
         	}
         }
 	elseif ($chatIdAtual == $chatIdBurityps) {
-	if($quotedMsg == "null"){
+	if($idmsg == "null"){
 	  if($typeAtual == "chat") {
         	   	$dados = file_get_contents($APIurl."sendMessage?token=".$token."&chatId=".$chatIdBuritypsJP."&body=".$text);
              	}
