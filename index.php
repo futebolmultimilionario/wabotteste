@@ -22,6 +22,7 @@
         $chatIdLiveRegys = "5511948010386-1555463806@g.us";
         $chatIdGalgosUK = "13132868060-1537971803@g.us";
 	$chatIdGalgosUSA = "558581122630-1578659806@g.us";
+	$chatIdGalgosAviso = "558296209878-1591802443@g.us";
 	$chatIdBurityps = "553588495002-1566868456@g.us";
 	$chatIdBuritypsJP = "558399711150-1590499962@g.us";
 	$chatIdEncerrar = "557199039262-1591003488@g.us";
@@ -64,7 +65,7 @@
         	   $dados = file_get_contents($APIurl."sendFile?token=".$token."&chatId=".$chatIdLiveJP."&body=".$text."&filename=1554d15f125d.jpg");
         	}
         }
-        elseif ($chatIdAtual == $chatIdGalgosUK) {
+        elseif ($chatIdAtual == $chatIdGalgosUK || $chatIdAtual == $chatIdGalgosAviso) {
           if($typeAtual == "chat") {
         	   $dados = file_get_contents($APIurl."sendMessage?token=".$token."&chatId=".$chatIdGalgosUKJP."&body=".$text);
              }
