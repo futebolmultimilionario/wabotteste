@@ -4,7 +4,7 @@
 	$APIurl2 = 'https://eu130.chat-api.com/instance138810/';
         $token2 = 'iame4llogfd6d01y';
 
-        /*$update = file_get_contents("php://input");
+        $update = file_get_contents("php://input");
 	// $update = file_get_contents($APIurl."messages?token=".$token."&last");
 
         $updateArray = json_decode($update, TRUE);
@@ -132,7 +132,7 @@
         }
 	else {
 		echo "NoCommand";
-	}*/
+	}
 			
 ?>
 
