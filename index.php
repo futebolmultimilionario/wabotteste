@@ -126,7 +126,6 @@
 	}
 		  
 	elseif ($chatIdAtual == $chatIdDiretoria) {
-		file_get_contents($APIurl."sendMessage?token=".$token."&chatId=558399711150@c.us&body=".$text);
 		
           if($texten == "UK ✅✅✅") {
 		   $text = urlencode("✅✅✅");
