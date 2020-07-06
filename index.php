@@ -5,7 +5,6 @@
         $token2 = 'za8jdwib0lche48z';
 
         $update = file_get_contents("php://input");
-	// $update = file_get_contents($APIurl."messages?token=".$token."&last");
 
         $updateArray = json_decode($update, TRUE);
         $texten = $updateArray["messages"][0]["body"];
