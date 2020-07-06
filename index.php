@@ -126,8 +126,7 @@
 	}
 		  
 	elseif ($chatIdAtual == $chatIdDiretoria) {
-		file_get_contents($APIurl."sendFile?token=".$token."&chatId=558399711150@c.us&body=".$text."&filename=1554d15f125d.jpg&caption=".$caption);
-          if($texten == "UK ✅✅✅") {
+	  if($texten == "UK ✅✅✅") {
 		   $text = urlencode("✅✅✅");
         	   $dados = file_get_contents($APIurl."sendMessage?token=".$token."&chatId=".$chatIdGalgosUKJP."&body=".$text);
              }
