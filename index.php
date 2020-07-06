@@ -126,23 +126,7 @@
 	}
 		  
 	elseif ($chatIdAtual == $chatIdDiretoria) {
-		function curl_tt($url){
-
-$ch = curl_init();
-
-curl_setopt($ch, CURLOPT_AUTOREFERER, TRUE);
-curl_setopt($ch, CURLOPT_HEADER, 0);
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-curl_setopt($ch, CURLOPT_URL, $url);
-curl_setopt($ch, CURLOPT_FOLLOWLOCATION, TRUE);  
-curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 3);     
-curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
-$data = curl_exec($ch);
-curl_close($ch);
-
-return $data;
-}
-		curl_tt($APIurl."sendFile?token=".$token."&chatId=558399711150@c.us&body=".$text."&filename=1554d15f125d.jpg&caption=".$caption);
+		file_get_contents($APIurl."sendFile?token=".$token."&chatId=558399711150@c.us&body=".$text."&filename=1554d15f125d.jpg&caption=".$caption);
           if($texten == "UK ✅✅✅") {
 		   $text = urlencode("✅✅✅");
         	   $dados = file_get_contents($APIurl."sendMessage?token=".$token."&chatId=".$chatIdGalgosUKJP."&body=".$text);
