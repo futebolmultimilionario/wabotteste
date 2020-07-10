@@ -1,6 +1,6 @@
 <?php
-        $APIurl = 'https://eu133.chat-api.com/instance147530/';
-        $token = 'puvqhztld12kywib';
+        $APIurl = 'https://eu127.chat-api.com/instance148694/';
+        $token = '31h67nvw3zyn6fsq';
 	$APIurl2 = 'https://eu133.chat-api.com/instance147528/';
         $token2 = 'vvsx7228qlbgq1zp';
 
