@@ -34,9 +34,9 @@
 	if ($typeAtual == "image") {
 		$caption = urlencode($updateArray["messages"][0]["caption"]);
 	}
-	$ch = curl_init();
+	
 	function file_get_contents_curl($url) {
-		global $ch;
+		$ch = curl_init();
     		curl_setopt($ch, CURLOPT_AUTOREFERER, TRUE);
     		curl_setopt($ch, CURLOPT_HEADER, 0);
     		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
