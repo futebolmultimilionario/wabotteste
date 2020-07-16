@@ -91,13 +91,13 @@
         }
 	elseif ($chatIdAtual == $chatIdGalgosUSA) {
 	  if($typeAtual == "chat") {
-        	   	$dados = file_get_contents($APIurl."sendMessage?token=".$token."&chatId=".$chatIdGalgosUSAJP."&body=".$text);
+        	   	file_get_contents_curl($APIurl."sendMessage?token=".$token."&chatId=".$chatIdGalgosUSAJP."&body=".$text);
              	}
           	elseif ($typeAtual == "image") {
-        		$dados = file_get_contents($APIurl."sendFile?token=".$token."&chatId=".$chatIdGalgosUSAJP."&body=".$text."&filename=1554d15f125d.jpg&caption=".$caption);
+        		file_get_contents_curl($APIurl."sendFile?token=".$token."&chatId=".$chatIdGalgosUSAJP."&body=".$text."&filename=1554d15f125d.jpg&caption=".$caption);
           	}
 		elseif ($typeAtual == "document" || $typeAtual == "audio") {
-        	   $dados = file_get_contents($APIurl."sendFile?token=".$token."&chatId=".$chatIdGalgosUSAJP."&body=".$text."&filename=1554d15f125d.jpg");
+        	   file_get_contents_curl($APIurl."sendFile?token=".$token."&chatId=".$chatIdGalgosUSAJP."&body=".$text."&filename=1554d15f125d.jpg");
         	}
         }
 	elseif ($chatIdAtual == $chatIdBurityps) {
