@@ -36,7 +36,7 @@
 	}
 	$ch = curl_init();
 	function file_get_contents_curl($url) {
-
+		global $ch;
     		curl_setopt($ch, CURLOPT_AUTOREFERER, TRUE);
     		curl_setopt($ch, CURLOPT_HEADER, 0);
     		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
