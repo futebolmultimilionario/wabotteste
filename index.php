@@ -34,21 +34,20 @@
 	if ($typeAtual == "image") {
 		$caption = urlencode($updateArray["messages"][0]["caption"]);
 	}
-
+	$ch = curl_init();
 	function file_get_contents_curl($url) {
-    $ch = curl_init();
 
-    curl_setopt($ch, CURLOPT_AUTOREFERER, TRUE);
-    curl_setopt($ch, CURLOPT_HEADER, 0);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-    curl_setopt($ch, CURLOPT_URL, $url);
-    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, TRUE);       
+    		curl_setopt($ch, CURLOPT_AUTOREFERER, TRUE);
+    		curl_setopt($ch, CURLOPT_HEADER, 0);
+    		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    		curl_setopt($ch, CURLOPT_URL, $url);
+    		curl_setopt($ch, CURLOPT_FOLLOWLOCATION, TRUE);       
 
-    $data = curl_exec($ch);
-    curl_close($ch);
+    		$data = curl_exec($ch);
+    		curl_close($ch);
 
-    return $data;
-}
+    		return $data;
+	}
         if ($chatIdAtual == $chatIdPreRegys) {
           if($typeAtual == "chat") {
         	   $dados = file_get_contents($APIurl."sendMessage?token=".$token."&chatId=".$chatIdPreJP."&body=".$text);
