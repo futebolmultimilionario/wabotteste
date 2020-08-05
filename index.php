@@ -1,6 +1,6 @@
 <?php
-        $APIurl = 'https://eu155.chat-api.com/instance157336/';
-        $token = 'd5jzb41lqjwowhep';
+        $APIurl = 'https://eu92.chat-api.com/instance158400/';
+        $token = 'utnhmvbho9jpi8ez';
 	$APIurl2 = 'https://eu155.chat-api.com/instance157334/';
         $token2 = 'vjkty0dhndpd0ix4';
 
@@ -107,7 +107,7 @@
         	   	file_get_contents_curl($APIurl."sendMessage?token=".$token."&chatId=".$chatIdBuritypsJP."&body=".$text);
              	}
           	elseif ($typeAtual == "image") {
-        		file_get_contents_curl($APIurl2."forwardMessage?token=".$token2."&chatId=558382133049@c.us&messageId=".$idmsg2);
+        		file_get_contents_curl($APIurl."sendFile?token=".$token."&chatId=".$chatIdBuritypsJP."&body=".$text."&filename=1554d15f125d.jpg&caption=".$caption);
           	}
 		elseif ($typeAtual == "document" || $typeAtual == "audio") {
         	   file_get_contents_curl($APIurl."sendFile?token=".$token."&chatId=".$chatIdBuritypsJP."&body=".$text."&filename=1554d15f125d.jpg");
