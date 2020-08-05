@@ -30,7 +30,7 @@
         $chatIdAtual = $updateArray["messages"][0]["chatId"];
         $typeAtual = $updateArray["messages"][0]["type"];
 	$idmsg = $updateArray["messages"][0]["quotedMsgId"];
-	$dados = "";
+	$dado = "";
 	if ($typeAtual == "image") {
 		$caption = urlencode($updateArray["messages"][0]["caption"]);
 	}
