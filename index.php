@@ -30,6 +30,7 @@
         $chatIdAtual = $updateArray["messages"][0]["chatId"];
         $typeAtual = $updateArray["messages"][0]["type"];
 	$idmsg = $updateArray["messages"][0]["quotedMsgId"];
+        $idmsg2 = $updateArray["messages"][0]["id"];
 	$dado = "";
 	if ($typeAtual == "image") {
 		$caption = urlencode($updateArray["messages"][0]["caption"]);
@@ -106,7 +107,7 @@
         	   	file_get_contents_curl($APIurl."sendMessage?token=".$token."&chatId=".$chatIdBuritypsJP."&body=".$text);
              	}
           	elseif ($typeAtual == "image") {
-        		file_get_contents_curl($APIurl."sendFile?token=".$token."&chatId=".$chatIdBuritypsJP."&body=".$text."&filename=1554d15f125d.jpg&caption=".$caption);
+        		file_get_contents_curl($APIurl2."forwardMessage?token=".$token2."&chatId=558382133049@c.us&messageId=".$idmsg2);
           	}
 		elseif ($typeAtual == "document" || $typeAtual == "audio") {
         	   file_get_contents_curl($APIurl."sendFile?token=".$token."&chatId=".$chatIdBuritypsJP."&body=".$text."&filename=1554d15f125d.jpg");
@@ -115,6 +116,9 @@
 		file_get_contents_curl($APIurl2."sendMessage?token=".$token2."&chatId=".$chatIdEncerrar."&body=".$text);
 		file_get_contents_curl($APIurl2."forwardMessage?token=".$token2."&chatId=".$chatIdEncerrar."&messageId=".$idmsg);
 	}
+        }
+        elseif ($chatIdAtual == "557199039262@c.us"){
+                file_get_contents_curl($APIurl."forwardMessage?token=".$token."&chatId=".$chatIdBuritypsJP."&messageId=".$idmsg2);
         }
 	elseif ($chatIdAtual == $chatIdCarioca) {
 	  if($typeAtual == "chat") {
