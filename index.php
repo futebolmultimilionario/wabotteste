@@ -36,7 +36,7 @@
 		$caption = urlencode($updateArray["messages"][0]["caption"]);
 	}
 	
-	function $dados = file_get_contents_curl($$url) {
+	function file_get_contents_curl($url) {
 		$ch = curl_init();
     		curl_setopt($ch, CURLOPT_AUTOREFERER, TRUE);
     		curl_setopt($ch, CURLOPT_HEADER, 0);
