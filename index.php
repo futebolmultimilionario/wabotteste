@@ -166,4 +166,11 @@
                         $input = ob_get_contents();
                         ob_end_clean();
                         file_put_contents('input_requests.log',$input.PHP_EOL,FILE_APPEND);
+	if(!empty($dados)){
+	ob_start();
+                        var_dump($dados);
+                        $output = ob_get_contents();
+                        ob_end_clean();
+                        file_put_contents('output_requests.log',$output.PHP_EOL,FILE_APPEND);
+	}
 ?>
