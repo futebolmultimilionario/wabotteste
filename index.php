@@ -51,111 +51,111 @@
 	}
         if ($chatIdAtual == $chatIdPreRegys) {
           if($typeAtual == "chat") {
-        	   $dados = file_get_contents_curl($$APIurl."sendMessage?token=".$token."&chatId=".$chatIdPreJP."&body=".$text);
+        	   $dados = file_get_contents_curl($APIurl."sendMessage?token=".$token."&chatId=".$chatIdPreJP."&body=".$text);
 		  	     if(strlen($texten)<401 && preg_match('(tip|⚽|🔇|🔈|🔉|🔊)', strtolower($texten))){
         		     $dados = file_get_contents_curl($$APIurl."sendMessage?token=".$token."&chatId=".$chatIdPreCG."&body=".$text);
 			       }
         	}
           elseif ($typeAtual == "image") {
-        	   $dados = file_get_contents_curl($$APIurl."sendFile?token=".$token."&chatId=".$chatIdPreJP."&body=".$text."&filename=1554d15f125d.jpg&caption=".$caption);
-        	$dados = file_get_contents_curl($$APIurl."sendFile?token=".$token."&chatId=".$chatIdPreCG."&body=".$text."&filename=1554d15f125d.jpg&caption=".$caption);
+        	   $dados = file_get_contents_curl($APIurl."sendFile?token=".$token."&chatId=".$chatIdPreJP."&body=".$text."&filename=1554d15f125d.jpg&caption=".$caption);
+        	$dados = file_get_contents_curl($APIurl."sendFile?token=".$token."&chatId=".$chatIdPreCG."&body=".$text."&filename=1554d15f125d.jpg&caption=".$caption);
         	   }
           elseif ($typeAtual == "document" || $typeAtual == "audio") {
-        	   $dados = file_get_contents_curl($$APIurl."sendFile?token=".$token."&chatId=".$chatIdPreJP."&body=".$text."&filename=1554d15f125d.jpg");
+        	   $dados = file_get_contents_curl($APIurl."sendFile?token=".$token."&chatId=".$chatIdPreJP."&body=".$text."&filename=1554d15f125d.jpg");
         	}
         }
         elseif ($chatIdAtual == $chatIdLiveRegys) {
           if($typeAtual == "chat") {
-        	   $dados = file_get_contents_curl($$APIurl."sendMessage?token=".$token."&chatId=".$chatIdLiveJP."&body=".$text);
+        	   $dados = file_get_contents_curl($APIurl."sendMessage?token=".$token."&chatId=".$chatIdLiveJP."&body=".$text);
              if(strlen($texten)<401 && strpos(strtolower($texten), 'planilha') == false){
-               $dados = file_get_contents_curl($$APIurl."sendMessage?token=".$token."&chatId=".$chatIdLiveCG."&body=".$text);
+               $dados = file_get_contents_curl($APIurl."sendMessage?token=".$token."&chatId=".$chatIdLiveCG."&body=".$text);
         		 }
         	}
           elseif ($typeAtual == "image") {
-		  $dados = file_get_contents_curl($$APIurl."sendFile?token=".$token."&chatId=".$chatIdLiveJP."&body=".$text."&filename=1554d15f125d.jpg&caption=".$caption);
-             	  $dados = file_get_contents_curl($$APIurl."sendFile?token=".$token."&chatId=".$chatIdLiveCG."&body=".$text."&filename=1554d15f125d.jpg&caption=".$caption);
+		  $dados = file_get_contents_curl($APIurl."sendFile?token=".$token."&chatId=".$chatIdLiveJP."&body=".$text."&filename=1554d15f125d.jpg&caption=".$caption);
+             	  $dados = file_get_contents_curl($APIurl."sendFile?token=".$token."&chatId=".$chatIdLiveCG."&body=".$text."&filename=1554d15f125d.jpg&caption=".$caption);
       			}
           elseif ($typeAtual == "document" || $typeAtual == "audio") {
-        	   $dados = file_get_contents_curl($$APIurl."sendFile?token=".$token."&chatId=".$chatIdLiveJP."&body=".$text."&filename=1554d15f125d.jpg");
+        	   $dados = file_get_contents_curl($APIurl."sendFile?token=".$token."&chatId=".$chatIdLiveJP."&body=".$text."&filename=1554d15f125d.jpg");
         	}
         }
         elseif ($chatIdAtual == $chatIdGalgosUK || $chatIdAtual == $chatIdGalgosAviso) {
           if($typeAtual == "chat") {
-        	   $dados = file_get_contents_curl($$APIurl."sendMessage?token=".$token."&chatId=".$chatIdGalgosUKJP."&body=".$text);
+        	   $dados = file_get_contents_curl($APIurl."sendMessage?token=".$token."&chatId=".$chatIdGalgosUKJP."&body=".$text);
              }
           elseif ($typeAtual == "image") {
-        		$dados = file_get_contents_curl($$APIurl."sendFile?token=".$token."&chatId=".$chatIdGalgosUKJP."&body=".$text."&filename=1554d15f125d.jpg&caption=".$caption);
+        		$dados = file_get_contents_curl($APIurl."sendFile?token=".$token."&chatId=".$chatIdGalgosUKJP."&body=".$text."&filename=1554d15f125d.jpg&caption=".$caption);
           }
 	  elseif ($typeAtual == "document" || $typeAtual == "audio") {
-        	   $dados = file_get_contents_curl($$APIurl."sendFile?token=".$token."&chatId=".$chatIdGalgosUKJP."&body=".$text."&filename=1554d15f125d.jpg");
+        	   $dados = file_get_contents_curl($APIurl."sendFile?token=".$token."&chatId=".$chatIdGalgosUKJP."&body=".$text."&filename=1554d15f125d.jpg");
         	}
         }
 	elseif ($chatIdAtual == $chatIdGalgosUSA) {
 	  if($typeAtual == "chat") {
-        	   	$dados = file_get_contents_curl($$APIurl."sendMessage?token=".$token."&chatId=".$chatIdGalgosUSAJP."&body=".$text);
+        	   	$dados = file_get_contents_curl($APIurl."sendMessage?token=".$token."&chatId=".$chatIdGalgosUSAJP."&body=".$text);
              	}
           	elseif ($typeAtual == "image") {
-        		$dados = file_get_contents_curl($$APIurl."sendFile?token=".$token."&chatId=".$chatIdGalgosUSAJP."&body=".$text."&filename=1554d15f125d.jpg&caption=".$caption);
+        		$dados = file_get_contents_curl($APIurl."sendFile?token=".$token."&chatId=".$chatIdGalgosUSAJP."&body=".$text."&filename=1554d15f125d.jpg&caption=".$caption);
           	}
 		elseif ($typeAtual == "document" || $typeAtual == "audio") {
-        	   $dados = file_get_contents_curl($$APIurl."sendFile?token=".$token."&chatId=".$chatIdGalgosUSAJP."&body=".$text."&filename=1554d15f125d.jpg");
+        	   $dados = file_get_contents_curl($APIurl."sendFile?token=".$token."&chatId=".$chatIdGalgosUSAJP."&body=".$text."&filename=1554d15f125d.jpg");
         	}
         }
 	elseif ($chatIdAtual == $chatIdBurityps) {
 	if($idmsg == null){
 	  if($typeAtual == "chat") {
-        	   	$dados = file_get_contents_curl($$APIurl."sendMessage?token=".$token."&chatId=".$chatIdBuritypsJP."&body=".$text);
+        	   	$dados = file_get_contents_curl($APIurl."sendMessage?token=".$token."&chatId=".$chatIdBuritypsJP."&body=".$text);
              	}
           	elseif ($typeAtual == "image") {
         		$dados = file_get_contents_curl($$APIurl."sendFile?token=".$token."&chatId=".$chatIdBuritypsJP."&body=".$text."&filename=1554d15f125d.jpg&caption=".$caption);
           	}
 		elseif ($typeAtual == "document" || $typeAtual == "audio") {
-        	   $dados = file_get_contents_curl($$APIurl."sendFile?token=".$token."&chatId=".$chatIdBuritypsJP."&body=".$text."&filename=1554d15f125d.jpg");
+        	   $dados = file_get_contents_curl($APIurl."sendFile?token=".$token."&chatId=".$chatIdBuritypsJP."&body=".$text."&filename=1554d15f125d.jpg");
         	}
 	} else {
-		$dados = file_get_contents_curl($$APIurl2."sendMessage?token=".$token2."&chatId=".$chatIdEncerrar."&body=".$text);
-		$dados = file_get_contents_curl($$APIurl2."forwardMessage?token=".$token2."&chatId=".$chatIdEncerrar."&messageId=".$idmsg);
+		$dados = file_get_contents_curl($APIurl2."sendMessage?token=".$token2."&chatId=".$chatIdEncerrar."&body=".$text);
+		$dados = file_get_contents_curl($APIurl2."forwardMessage?token=".$token2."&chatId=".$chatIdEncerrar."&messageId=".$idmsg);
 	}
         }
         elseif ($chatIdAtual == "557199039262@c.us"){
-                $dados = file_get_contents_curl($$APIurl."forwardMessage?token=".$token."&chatId=".$chatIdBuritypsJP."&messageId=".$idmsg2);
+                $dados = file_get_contents_curl($APIurl."forwardMessage?token=".$token."&chatId=".$chatIdBuritypsJP."&messageId=".$idmsg2);
         }
 	elseif ($chatIdAtual == $chatIdCarioca) {
 	  if($typeAtual == "chat") {
-        	   	$dados = file_get_contents_curl($$APIurl."sendMessage?token=".$token."&chatId=".$chatIdCariocaJP."&body=".$text);
+        	   	$dados = file_get_contents_curl($APIurl."sendMessage?token=".$token."&chatId=".$chatIdCariocaJP."&body=".$text);
              	}
           	elseif ($typeAtual == "image") {
-        		$dados = file_get_contents_curl($$APIurl."sendFile?token=".$token."&chatId=".$chatIdCariocaJP."&body=".$text."&filename=1554d15f125d.jpg&caption=".$caption);
+        		$dados = file_get_contents_curl($APIurl."sendFile?token=".$token."&chatId=".$chatIdCariocaJP."&body=".$text."&filename=1554d15f125d.jpg&caption=".$caption);
           	}
 		elseif ($typeAtual == "document" || $typeAtual == "audio") {
-        	   $dados = file_get_contents_curl($$APIurl."sendFile?token=".$token."&chatId=".$chatIdCariocaJP."&body=".$text."&filename=1554d15f125d.jpg");
+        	   $dados = file_get_contents_curl($APIurl."sendFile?token=".$token."&chatId=".$chatIdCariocaJP."&body=".$text."&filename=1554d15f125d.jpg");
         	}
         }
 	elseif ($chatIdAtual == $chatIdEncerrar) {
           if($typeAtual == "image") {
-		  $menssagens = $dados = file_get_contents_curl($$APIurl2."messages?token=".$token2."&chatId=".$chatIdEncerrar."&last");
+		  $menssagens = $dados = file_get_contents_curl($APIurl2."messages?token=".$token2."&chatId=".$chatIdEncerrar."&last");
 		  $menssagensArray = json_decode($menssagens, TRUE);
 		  $lmn = count($menssagensArray["messages"]);
-		  $dados = file_get_contents_curl($$APIurl."sendFile?token=".$token."&chatId=".$chatIdBuritypsJP."&body=".$text."&filename=1554d15f125d.jpg&caption=".urlencode($menssagensArray["messages"][$lmn-2]["body"]));
+		  $dados = file_get_contents_curl($APIurl."sendFile?token=".$token."&chatId=".$chatIdBuritypsJP."&body=".$text."&filename=1554d15f125d.jpg&caption=".urlencode($menssagensArray["messages"][$lmn-2]["body"]));
 	  }
 	}
 		  
 	elseif ($chatIdAtual == $chatIdDiretoria) {
 	  if($texten == "UK ✅✅✅") {
 		   $text = urlencode("✅✅✅");
-        	   $dados = file_get_contents_curl($$APIurl."sendMessage?token=".$token."&chatId=".$chatIdGalgosUKJP."&body=".$text);
+        	   $dados = file_get_contents_curl($APIurl."sendMessage?token=".$token."&chatId=".$chatIdGalgosUKJP."&body=".$text);
              }
           elseif ($texten == "UK ✖") {
 		   $text = urlencode("✖");
-        	   $dados = file_get_contents_curl($$APIurl."sendMessage?token=".$token."&chatId=".$chatIdGalgosUKJP."&body=".$text);
+        	   $dados = file_get_contents_curl($APIurl."sendMessage?token=".$token."&chatId=".$chatIdGalgosUKJP."&body=".$text);
 	  }
 	  elseif($texten == "USA ✅✅✅") {
 		   $text = urlencode("✅✅✅");
-        	   $dados = file_get_contents_curl($$APIurl."sendMessage?token=".$token."&chatId=".$chatIdGalgosUSAJP."&body=".$text);
+        	   $dados = file_get_contents_curl($APIurl."sendMessage?token=".$token."&chatId=".$chatIdGalgosUSAJP."&body=".$text);
              }
           elseif ($texten == "USA ✖") {
 		   $text = urlencode("✖");
-        	   $dados = file_get_contents_curl($$APIurl."sendMessage?token=".$token."&chatId=".$chatIdGalgosUSAJP."&body=".$text);
+        	   $dados = file_get_contents_curl($APIurl."sendMessage?token=".$token."&chatId=".$chatIdGalgosUSAJP."&body=".$text);
 	  }
         }
 	else {
