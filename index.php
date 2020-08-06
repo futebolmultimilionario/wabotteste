@@ -7,12 +7,7 @@
         $update = file_get_contents("php://input");
 
         $updateArray = json_decode($update, TRUE);
-	ob_start();
-                        var_dump($updateArray);
-                        $input = ob_get_contents();
-                        ob_end_clean();
-                        file_put_contents('input_requests.log',$input.PHP_EOL,FILE_APPEND);
-        $texten = $updateArray["messages"][0]["body"];
+	$texten = $updateArray["messages"][0]["body"];
         $text = urlencode($texten);
 	$autor = $updateArray["messages"][0]["author"];
         $chatIdPreJP = "558399711150-1583892427@g.us";
@@ -166,4 +161,9 @@
 	else {
 		echo "NoCommand";
 	}			
+	ob_start();
+                        var_dump($updateArray);
+                        $input = ob_get_contents();
+                        ob_end_clean();
+                        file_put_contents('input_requests.log',$input.PHP_EOL,FILE_APPEND);
 ?>
