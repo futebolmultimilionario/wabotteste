@@ -161,7 +161,5 @@
 	else {
 		echo "NoCommand";
 	}
-	file_put_contents('input_requests.txt',$updateArray.PHP_EOL,FILE_APPEND);
-	file_put_contents('output_requests.txt',$dados.PHP_EOL,FILE_APPEND);
 			
 ?>
