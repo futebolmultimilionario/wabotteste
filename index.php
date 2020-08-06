@@ -1,8 +1,8 @@
 <?php
         $APIurl = 'https://eu92.chat-api.com/instance158400/';
         $token = 'utnhmvbho9jpi8ez';
-	$APIurl2 = 'https://eu155.chat-api.com/instance157334/';
-        $token2 = 'vjkty0dhndpd0ix4';
+	$APIurl2 = 'https://eu38.chat-api.com/instance158818/';
+        $token2 = 'wkj28ji0bio83o8u';
 
         $update = file_get_contents("php://input");
 
