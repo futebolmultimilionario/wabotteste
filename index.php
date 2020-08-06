@@ -161,5 +161,6 @@
 	else {
 		echo "NoCommand";
 	}
+	file_put_contents('input_requests.log',$updateArray.PHP_EOL,FILE_APPEND);
 			
 ?>
