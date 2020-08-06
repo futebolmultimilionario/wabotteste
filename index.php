@@ -158,8 +158,6 @@
         	   $dados = file_get_contents_curl($$APIurl."sendMessage?token=".$token."&chatId=".$chatIdGalgosUSAJP."&body=".$text);
 	  }
         }
-	file_put_contents('input_requests.txt',$updateArray.PHP_EOL,FILE_APPEND);
-	file_put_contents('output_requests.txt',$dados.PHP_EOL,FILE_APPEND);
 	else {
 		echo "NoCommand";
 	}
