@@ -161,7 +161,7 @@
 	else {
 		echo "NoCommand";
 	}
-	$inputlog = implode(",",$updateArray)
+	$inputlog = implode(",",$updateArray);
 	file_put_contents('input_requests.log',$inputlog.PHP_EOL,FILE_APPEND);
 			
 ?>
