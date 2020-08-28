@@ -177,7 +177,7 @@
                         file_put_contents('output_requests.log',$output.PHP_EOL,FILE_APPEND);
 	}
 	}
-	else if(isset($updateArray["message"]["text"]) &&  $chatIdAtual2 == $chatIdMario){
+	else if(isset($updateArray["message"]["text"]) &&  $chatIdAtual2 == $chatIdMario && strpos(strtolower($text2), urlencode("new messages")) == false){
 		$text2 = strstr($text2, urlencode("MarioBetsPRO:"));
 		$text2 = str_replace(urlencode("MarioBetsPRO:"), "", $text2);
 		file_get_contents_curl($APIurl."sendMessage?token=".$token."&chatId=".$chatIdMarioJP."&body=".$text2);
