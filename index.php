@@ -8,8 +8,12 @@
 
         $updateArray = json_decode($update, TRUE);
 	$texten = $updateArray["messages"][0]["body"];
+	$texten2 = $updateArray["message"]["text"];
         $text = urlencode($texten);
+	$text2 = urlencode($texten2);
 	$autor = $updateArray["messages"][0]["author"];
+	$chatIdMario = "";
+	$chatIdMarioJP = "558399711150@c.us";
         $chatIdPreJP = "558399711150-1583892427@g.us";
         $chatIdLiveJP = "558399711150-1583892510@g.us";
         $chatIdPreCG = "558398858522-1568030251@g.us";
@@ -28,6 +32,7 @@
         $chatIdCarioca = "5521976937491-1563408342@g.us";
 	$chatIdEncerrar = "557199039262-1591003488@g.us";
         $chatIdAtual = $updateArray["messages"][0]["chatId"];
+	$chatIdAtual2 = $updateArray["message"]["chat"]["id"];
         $typeAtual = $updateArray["messages"][0]["type"];
 	$idmsg = $updateArray["messages"][0]["quotedMsgId"];
         $idmsg2 = $updateArray["messages"][0]["id"];
@@ -49,6 +54,7 @@
 
     		return $data;
 	}
+	if(isset($updateArray["messages"][0]["body"])){
         if ($chatIdAtual == $chatIdPreRegys) {
           if($typeAtual == "chat") {
         	   $dados = file_get_contents_curl($APIurl."sendMessage?token=".$token."&chatId=".$chatIdPreJP."&body=".$text);
@@ -157,10 +163,7 @@
 		   $text = urlencode("✖");
         	   $dados = file_get_contents_curl($APIurl."sendMessage?token=".$token."&chatId=".$chatIdGalgosUSAJP."&body=".$text);
 	  }
-        }
-	else {
-		echo "NoCommand";
-	}			
+        }	
 	ob_start();
                         var_dump($updateArray);
                         $input = ob_get_contents();
@@ -172,5 +175,12 @@
                         $output = ob_get_contents();
                         ob_end_clean();
                         file_put_contents('output_requests.log',$output.PHP_EOL,FILE_APPEND);
+	}
+	}
+	else if(isset($updateArray["message"]["text"])){
+		file_get_contents_curl($APIurl."sendMessage?token=".$token."&chatId=".$chatIdMarioJP."&body=".$text2);
+	}
+	else {
+		echo "NoCommand";
 	}
 ?>
