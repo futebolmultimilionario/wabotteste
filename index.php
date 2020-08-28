@@ -12,7 +12,7 @@
         $text = urlencode($texten);
 	$text2 = urlencode($texten2);
 	$autor = $updateArray["messages"][0]["author"];
-	$chatIdMario = "";
+	$chatIdMario = "-407422984";
 	$chatIdMarioJP = "558399711150-1598578355@g.us";
         $chatIdPreJP = "558399711150-1583892427@g.us";
         $chatIdLiveJP = "558399711150-1583892510@g.us";
@@ -177,7 +177,7 @@
                         file_put_contents('output_requests.log',$output.PHP_EOL,FILE_APPEND);
 	}
 	}
-	else if(isset($updateArray["message"]["text"])){
+	else if(isset($updateArray["message"]["text"]) &&  $chatIdAtual2 == $chatIdMario){
 		file_get_contents_curl($APIurl."sendMessage?token=".$token."&chatId=".$chatIdMarioJP."&body=".$text2);
 	}
 	else {
