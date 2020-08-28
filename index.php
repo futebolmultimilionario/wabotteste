@@ -177,7 +177,7 @@
                         file_put_contents('output_requests.log',$output.PHP_EOL,FILE_APPEND);
 	}
 	}
-	else if(isset($updateArray["message"]["text"]) &&  $chatIdAtual2 == $chatIdMario && strpos(strtolower($texten2), 'new messages') == false){
+	else if(isset($updateArray["message"]["text"]) &&  $chatIdAtual2 == $chatIdMario){
 		$texten2 = strstr($texten2, 'MarioBetsPRO:');
 		$texten2 = str_replace("MarioBetsPRO:", "", $texten2);
 		$text2 = urlencode($texten2);
