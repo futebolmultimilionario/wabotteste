@@ -13,7 +13,7 @@
 	$text2 = urlencode($texten2);
 	$autor = $updateArray["messages"][0]["author"];
 	$chatIdMario = "";
-	$chatIdMarioJP = "558399711150@c.us";
+	$chatIdMarioJP = "558399711150-1598578355@g.us";
         $chatIdPreJP = "558399711150-1583892427@g.us";
         $chatIdLiveJP = "558399711150-1583892510@g.us";
         $chatIdPreCG = "558398858522-1568030251@g.us";
