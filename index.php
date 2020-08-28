@@ -178,7 +178,7 @@
 	}
 	}
 	else if(isset($updateArray["message"]["text"]) &&  $chatIdAtual2 == $chatIdMario){
-		$text2 = str_replace("MarioBetsPRO:", "", $text2);
+		$text2 = str_replace(urlencode("MarioBetsPRO:"), "", $text2);
 		file_get_contents_curl($APIurl."sendMessage?token=".$token."&chatId=".$chatIdMarioJP."&body=".$text2);
 	}
 	else {
