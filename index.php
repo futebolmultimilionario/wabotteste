@@ -7,11 +7,6 @@
         $update = file_get_contents("php://input");
 
         $updateArray = json_decode($update, TRUE);
-	$texten = $updateArray["messages"][0]["body"];
-	$texten2 = $updateArray["message"]["text"];
-        $text = urlencode($texten);
-	$text2 = urlencode($texten2);
-	$autor = $updateArray["messages"][0]["author"];
 	$chatIdMario = "-407422984";
 	$chatIdMarioJP = "558399711150-1598578355@g.us";
         $chatIdPreJP = "558399711150-1583892427@g.us";
@@ -31,15 +26,8 @@
 	$chatIdBuritypsJP = "558399711150-1590499962@g.us";
         $chatIdCarioca = "5521976937491-1563408342@g.us";
 	$chatIdEncerrar = "557199039262-1591003488@g.us";
-        $chatIdAtual = $updateArray["messages"][0]["chatId"];
-	$chatIdAtual2 = $updateArray["message"]["chat"]["id"];
-        $typeAtual = $updateArray["messages"][0]["type"];
-	$idmsg = $updateArray["messages"][0]["quotedMsgId"];
-        $idmsg2 = $updateArray["messages"][0]["id"];
+
 	$dados = "";
-	if ($typeAtual == "image") {
-		$caption = urlencode($updateArray["messages"][0]["caption"]);
-	}
 	
 	function file_get_contents_curl($url) {
 		$ch = curl_init();
@@ -55,6 +43,16 @@
     		return $data;
 	}
 	if(isset($updateArray["messages"][0]["body"])){
+		$chatIdAtual = $updateArray["messages"][0]["chatId"];
+        	$typeAtual = $updateArray["messages"][0]["type"];
+		$idmsg = $updateArray["messages"][0]["quotedMsgId"];
+        	$idmsg2 = $updateArray["messages"][0]["id"];
+		$texten = $updateArray["messages"][0]["body"];
+        	$text = urlencode($texten);
+		$autor = $updateArray["messages"][0]["author"];
+		if ($typeAtual == "image") {
+		$caption = urlencode($updateArray["messages"][0]["caption"]);
+	}
         if ($chatIdAtual == $chatIdPreRegys) {
           if($typeAtual == "chat") {
         	   $dados = file_get_contents_curl($APIurl."sendMessage?token=".$token."&chatId=".$chatIdPreJP."&body=".$text);
@@ -164,7 +162,7 @@
         	   $dados = file_get_contents_curl($APIurl."sendMessage?token=".$token."&chatId=".$chatIdGalgosUSAJP."&body=".$text);
 	  }
         }	
-	ob_start();
+			ob_start();
                         var_dump($updateArray);
                         $input = ob_get_contents();
                         ob_end_clean();
@@ -177,17 +175,23 @@
                         file_put_contents('output_requests.log',$output.PHP_EOL,FILE_APPEND);
 	}
 	}
-	else if(isset($updateArray["message"]["text"]) &&  $chatIdAtual2 == $chatIdMario && strpos(strtolower($text2), urlencode("new messages")) == false){
-		$numerodamensagem = strstr($text2, urlencode("MarioBetsPRO ("));
-		$numerodamensagem = str_replace(urlencode("MarioBetsPRO ("), "", $numerodamensagem);
-		$numerodamensagem = substr($numerodamensagem, 0, strpos($numerodamensagem, urlencode("):\nMarioBetsPRO:")));
-		if($numerodamensagem > file_get_contents('count.txt')){
-		$text2 = strstr($text2, urlencode("MarioBetsPRO:"));
-		$text2 = str_replace(urlencode("MarioBetsPRO:"), "", $text2);
-		file_get_contents_curl($APIurl."sendMessage?token=".$token."&chatId=".$chatIdMarioJP."&body=".$text2);
-		file_put_contents('count.txt', $numerodamensagem);
+
+	else if(isset($updateArray["message"]["text"])){
+		$texten2 = $updateArray["message"]["text"];
+		$text2 = urlencode($texten2);
+		$chatIdAtual2 = $updateArray["message"]["chat"]["id"];
+		if($chatIdAtual2 == $chatIdMario && strpos(strtolower($text2), urlencode("new messages")) == false){
+			$numerodamensagem = strstr($text2, urlencode("MarioBetsPRO ("));
+			$numerodamensagem = str_replace(urlencode("MarioBetsPRO ("), "", $numerodamensagem);
+			$numerodamensagem = substr($numerodamensagem, 0, strpos($numerodamensagem, urlencode("):\nMarioBetsPRO:")));
+			if($numerodamensagem > file_get_contents('count.txt')){
+				$text2 = strstr($text2, urlencode("MarioBetsPRO:"));
+				$text2 = str_replace(urlencode("MarioBetsPRO:"), "", $text2);
+				file_get_contents_curl($APIurl."sendMessage?token=".$token."&chatId=".$chatIdMarioJP."&body=".$text2);
+				file_put_contents('count.txt', $numerodamensagem);
+			}
 		}
-}
+	}
 	else {
 		echo "NoCommand";
 	}
