@@ -180,6 +180,11 @@
 		$texten2 = $updateArray["message"]["text"];
 		$text2 = urlencode($texten2);
 		$chatIdAtual2 = $updateArray["message"]["chat"]["id"];
+		ob_start();
+                var_dump($updateArray);
+                $input = ob_get_contents();
+                ob_end_clean();
+                file_put_contents('input_requests.log',$input.PHP_EOL,FILE_APPEND);
 		if($chatIdAtual2 == $chatIdMario && strpos(strtolower($text2), urlencode("new messages")) == false){
 			$numerodamensagem = strstr($text2, urlencode("MarioBetsPRO ("));
 			$numerodamensagem = str_replace(urlencode("MarioBetsPRO ("), "", $numerodamensagem);
