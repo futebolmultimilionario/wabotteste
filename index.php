@@ -10,6 +10,7 @@
 	$chatIdMario = "-407422984";
 	$chatIdTT = "183429885";
 	$chatIdMarioJP = "558399711150-1598578355@g.us";
+	$chatIdTTJP = "558399711150-1598997654@g.us";
         $chatIdPreJP = "558399711150-1583892427@g.us";
         $chatIdLiveJP = "558399711150-1583892510@g.us";
         $chatIdPreCG = "558398858522-1568030251@g.us";
@@ -182,7 +183,7 @@
 		$text2 = urlencode($texten2);
 		$chatIdAtual2 = $updateArray["message"]["chat"]["id"];
 		if($chatIdAtual2 == $chatIdTT){
-		file_get_contents_curl($APIurl."sendMessage?token=".$token."&chatId=".$chatIdMarioJP."&body=".$text2);
+		file_get_contents_curl($APIurl."sendMessage?token=".$token."&chatId=".$chatIdTTJP."&body=".$text2);
 		}
 		if($chatIdAtual2 == $chatIdMario && strpos(strtolower($text2), urlencode("new messages")) == false){
 			$numerodamensagem = strstr($text2, urlencode("MarioBetsPRO ("));
