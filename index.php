@@ -8,6 +8,7 @@
 
         $updateArray = json_decode($update, TRUE);
 	$chatIdMario = "-407422984";
+	$chatIdTT = "183429885";
 	$chatIdMarioJP = "558399711150-1598578355@g.us";
         $chatIdPreJP = "558399711150-1583892427@g.us";
         $chatIdLiveJP = "558399711150-1583892510@g.us";
@@ -180,11 +181,9 @@
 		$texten2 = $updateArray["message"]["text"];
 		$text2 = urlencode($texten2);
 		$chatIdAtual2 = $updateArray["message"]["chat"]["id"];
-		ob_start();
-                var_dump($updateArray);
-                $input = ob_get_contents();
-                ob_end_clean();
-                file_put_contents('input_requests.log',$input.PHP_EOL,FILE_APPEND);
+		if($chatIdAtual2 == $chatIdTT){
+		file_get_contents_curl($APIurl."sendMessage?token=".$token."&chatId=".$chatIdMarioJP."&body=".$text2);
+		}
 		if($chatIdAtual2 == $chatIdMario && strpos(strtolower($text2), urlencode("new messages")) == false){
 			$numerodamensagem = strstr($text2, urlencode("MarioBetsPRO ("));
 			$numerodamensagem = str_replace(urlencode("MarioBetsPRO ("), "", $numerodamensagem);
