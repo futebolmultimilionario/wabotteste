@@ -178,10 +178,8 @@
 	}
 	}
 	else if(isset($updateArray["message"]["text"]) &&  $chatIdAtual2 == $chatIdMario && strpos(strtolower($text2), urlencode("new messages")) == false){
-		$numerodamensagem = str_replace(urlencode("From inAlerts:
-MarioBetsPRO ("), "", $text2);
-		$numerodamensagem = substr($numerodamensagem, 0, strpos($numerodamensagem, urlencode("):
-MarioBetsPRO:")));
+		$numerodamensagem = str_replace(urlencode("From inAlerts:\nMarioBetsPRO ("), "", $text2);
+		$numerodamensagem = substr($numerodamensagem, 0, strpos($numerodamensagem, urlencode("):\nMarioBetsPRO:")));
 		if($numerodamensagem > file_get_contents('count.txt')){
 		$text2 = strstr($text2, urlencode("MarioBetsPRO:"));
 		$text2 = str_replace(urlencode("MarioBetsPRO:"), "", $text2);
