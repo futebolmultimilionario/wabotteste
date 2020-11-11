@@ -1,8 +1,8 @@
 <?php
-        $APIurl = 'https://eu61.chat-api.com/instance168189/';
-        $token = '2cwkoqkij1ltklsf';
-	$APIurl2 = 'https://eu179.chat-api.com/instance168187/';
-        $token2 = '0mhwfw4ypisg70rm';
+        $APIurl = 'https://eu115.chat-api.com/instance193702/';
+        $token = 'yuy4aoszaruoml4a';
+	$APIurl2 = 'https://eu115.chat-api.com/instance193702/';
+        $token2 = 'yuy4aoszaruoml4a';
 
         $update = file_get_contents("php://input");
 
@@ -24,8 +24,8 @@
         $chatIdGalgosUK = "13132868060-1537971803@g.us";
 	$chatIdGalgosUSA = "558581122630-1578659806@g.us";
 	$chatIdGalgosAviso = "558296209878-1591802443@g.us";
-	$chatIdBurityps = "553588495002-1566868456@g.us";
-	$chatIdBuritypsJP = "558399711150-1590499962@g.us";
+	$chatIdBurityps = "5511910325185-1604792050@g.us";
+	$chatIdBuritypsJP = "558399711150-1605061036@g.us";
         $chatIdCarioca = "5521976937491-1563408342@g.us";
 	$chatIdEncerrar = "557199039262-1591003488@g.us";
 
