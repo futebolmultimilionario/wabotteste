@@ -20,12 +20,12 @@
         $chatIdCariocaJP = "558399711150-1592428935@g.us";
 	$chatIdDiretoria = "558399711150-1583810992@g.us";
         $chatIdPreRegys = "5522997157745-1517163020@g.us";
-        $chatIdLiveRegys = "5583999711150@c.us";
+        $chatIdLiveRegys = "fdfddfdff";
         $chatIdGalgosUK = "13132868060-1537971803@g.us";
 	$chatIdGalgosUSA = "558581122630-1578659806@g.us";
 	$chatIdGalgosAviso = "558296209878-1591802443@g.us";
-	$chatIdBurityps = "d2ff561d65f1";
-	$chatIdBuritypsJP = "fdf1f15df";
+	$chatIdBurityps = "558399711150@c.us";
+	$chatIdBuritypsJP = "558399711150-1605061036@g.us";
         $chatIdCarioca = "5521976937491-1563408342@g.us";
 	$chatIdEncerrar = "557199039262-1591003488@g.us";
 
