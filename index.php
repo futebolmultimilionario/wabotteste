@@ -19,7 +19,7 @@
         $chatIdGalgosUSAJP = "558399711150-1583854681@g.us";
         $chatIdCariocaJP = "558399711150-1592428935@g.us";
 	$chatIdDiretoria = "558399711150-1583810992@g.us";
-        $chatIdPreRegys = "558399711150@c.us";
+        $chatIdPreRegys = "5511948010386-1552934954@g.us";
         $chatIdLiveRegys = "fdfddfdff";
         $chatIdGalgosUK = "13132868060-1537971803@g.us";
 	$chatIdGalgosUSA = "558581122630-1578659806@g.us";
