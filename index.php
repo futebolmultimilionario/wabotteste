@@ -58,14 +58,10 @@
         if ($chatIdAtual == $chatIdPreRegys) {
           if($typeAtual == "chat") {
         	   $dados = file_get_contents_curl($APIurl."sendMessage?token=".$token."&chatId=".$chatIdPreJP."&body=".$text);
-		  	     if(strlen($texten)<401 && preg_match('(tip|⚽|🔇|🔈|🔉|🔊)', strtolower($texten))){
-        		     $dados = file_get_contents_curl($APIurl."sendMessage?token=".$token."&chatId=".$chatIdPreCG."&body=".$text);
-			       }
-        	}
+		  	    }
           elseif ($typeAtual == "image") {
         	   $dados = file_get_contents_curl($APIurl."sendFile?token=".$token."&chatId=".$chatIdPreJP."&body=".$text."&filename=1554d15f125d.jpg&caption=".$caption);
-        	$dados = file_get_contents_curl($APIurl."sendFile?token=".$token."&chatId=".$chatIdPreCG."&body=".$text."&filename=1554d15f125d.jpg&caption=".$caption);
-        	   }
+        	}
           elseif ($typeAtual == "document" || $typeAtual == "audio") {
         	   $dados = file_get_contents_curl($APIurl."sendFile?token=".$token."&chatId=".$chatIdPreJP."&body=".$text."&filename=1554d15f125d.jpg");
         	}
