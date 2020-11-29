@@ -12,7 +12,7 @@
 	$chatIdMarioJP = "558399711150-1598578355@g.us";
 	$chatIdTTJP = "558399711150-1598997654@g.us";
         $chatIdPreJP = "558399711150-1605907495@g.us";
-        $chatIdLiveJP = "558399711150-1605061036@g.us";
+        $chatIdLiveJP = "558399711150-1606661975@g.us";
         $chatIdPreCG = "558398858522-1568030251@g.us";
         $chatIdLiveCG = "55df15f1d51f";
         $chatIdGalgosUKJP = "558399711150-1583892552@g.us";
