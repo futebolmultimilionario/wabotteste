@@ -24,10 +24,13 @@
         $chatIdGalgosUK = "13132868060-1537971803@g.us";
 	$chatIdGalgosUSA = "558581122630-1578659806@g.us";
 	$chatIdGalgosAviso = "558296209878-1591802443@g.us";
-	$chatIdBurityps = "5511910325185-1604792050@g.us";
-	$chatIdBuritypsJP = "558399711150-1605061036@g.us";
+	$chatIdWRHockey = "5511910325185-1604792050@g.us";
+	$chatIdWRHockeyJP = "558399711150-1605061036@g.us";
+	$chatIdBurityps = "556291769402-1567774335@g.us";
+	$chatIdBuritypsJP = "558399711150@c.us";
         $chatIdCarioca = "5521976937491-1563408342@g.us";
 	$chatIdEncerrar = "557199039262-1591003488@g.us";
+	$chatIdEncerrar2 = "558399711150-1606778100@g.us";
 
 	$dados = "";
 	
@@ -99,6 +102,22 @@
         	   $dados = file_get_contents_curl($APIurl."sendFile?token=".$token."&chatId=".$chatIdGalgosUSAJP."&body=".$text."&filename=1554d15f125d.jpg");
         	}
         }
+	elseif ($chatIdAtual == $chatIdWRHockey) {
+	if($idmsg == null){
+	  if($typeAtual == "chat") {
+        	   	$dados = file_get_contents_curl($APIurl."sendMessage?token=".$token."&chatId=".$chatIdWRHockeyJP."&body=".$text);
+             	}
+          	elseif ($typeAtual == "image") {
+        		$dados = file_get_contents_curl($APIurl."sendFile?token=".$token."&chatId=".$chatIdWRHockeyJP."&body=".$text."&filename=1554d15f125d.jpg&caption=".$caption);
+          	}
+		elseif ($typeAtual == "document" || $typeAtual == "audio") {
+        	   $dados = file_get_contents_curl($APIurl."sendFile?token=".$token."&chatId=".$chatIdWRHockeyJP."&body=".$text."&filename=1554d15f125d.jpg");
+        	}
+	} else {
+		$dados = file_get_contents_curl($APIurl2."sendMessage?token=".$token2."&chatId=".$chatIdEncerrar."&body=".$text);
+		$dados = file_get_contents_curl($APIurl2."forwardMessage?token=".$token2."&chatId=".$chatIdEncerrar."&messageId=".$idmsg);
+	}
+        }
 	elseif ($chatIdAtual == $chatIdBurityps) {
 	if($idmsg == null){
 	  if($typeAtual == "chat") {
@@ -111,8 +130,8 @@
         	   $dados = file_get_contents_curl($APIurl."sendFile?token=".$token."&chatId=".$chatIdBuritypsJP."&body=".$text."&filename=1554d15f125d.jpg");
         	}
 	} else {
-		$dados = file_get_contents_curl($APIurl2."sendMessage?token=".$token2."&chatId=".$chatIdEncerrar."&body=".$text);
-		$dados = file_get_contents_curl($APIurl2."forwardMessage?token=".$token2."&chatId=".$chatIdEncerrar."&messageId=".$idmsg);
+		$dados = file_get_contents_curl($APIurl2."sendMessage?token=".$token2."&chatId=".$chatIdEncerrar2."&body=".$text);
+		$dados = file_get_contents_curl($APIurl2."forwardMessage?token=".$token2."&chatId=".$chatIdEncerrar2."&messageId=".$idmsg);
 	}
         }
         elseif ($chatIdAtual == "557199039262@c.us"){
@@ -132,6 +151,14 @@
 	elseif ($chatIdAtual == $chatIdEncerrar) {
           if($typeAtual == "image") {
 		  $menssagens = $dados = file_get_contents_curl($APIurl2."messages?token=".$token2."&chatId=".$chatIdEncerrar."&last");
+		  $menssagensArray = json_decode($menssagens, TRUE);
+		  $lmn = count($menssagensArray["messages"]);
+		  $dados = file_get_contents_curl($APIurl."sendFile?token=".$token."&chatId=".$chatIdWRHockeyJP."&body=".$text."&filename=1554d15f125d.jpg&caption=".urlencode($menssagensArray["messages"][$lmn-2]["body"]));
+	  }
+	}
+	elseif ($chatIdAtual == $chatIdEncerrar2) {
+          if($typeAtual == "image") {
+		  $menssagens = $dados = file_get_contents_curl($APIurl2."messages?token=".$token2."&chatId=".$chatIdEncerrar2."&last");
 		  $menssagensArray = json_decode($menssagens, TRUE);
 		  $lmn = count($menssagensArray["messages"]);
 		  $dados = file_get_contents_curl($APIurl."sendFile?token=".$token."&chatId=".$chatIdBuritypsJP."&body=".$text."&filename=1554d15f125d.jpg&caption=".urlencode($menssagensArray["messages"][$lmn-2]["body"]));
