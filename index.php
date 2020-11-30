@@ -26,7 +26,7 @@
 	$chatIdGalgosAviso = "558296209878-1591802443@g.us";
 	$chatIdWRHockey = "5511910325185-1604792050@g.us";
 	$chatIdWRHockeyJP = "558399711150-1605061036@g.us";
-	$chatIdBurityps = "558399711150@c.us";
+	$chatIdBurityps = "556291769402-1567774335@g.us";
 	$chatIdBuritypsJP = "558399711150-1606777587@g.us";
         $chatIdCarioca = "5521976937491-1563408342@g.us";
 	$chatIdEncerrar = "557199039262-1591003488@g.us";
