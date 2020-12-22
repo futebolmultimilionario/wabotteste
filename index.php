@@ -111,7 +111,7 @@
         		$dados = file_get_contents_curl($APIurl."sendFile?token=".$token."&chatId=".$chatIdWRHockeyJP."&body=".$text."&filename=1554d15f125d.jpg&caption=".$caption);
           	}
 		elseif ($typeAtual == "document" || $typeAtual == "audio") {
-        	   $dados = file_get_contents_curl($APIurl."sendFile?token=".$token."&chatId=".$chatIdWRHockeyJP."&body=".$text."&filename=1554d15f125d.jpg");
+        	   $dados = file_get_contents_curl($APIurl."sendFile?token=".$token."&chatId=".$chatIdWRHockeyJP."&body=".$text);
         	}
 	} else {
 		$dados = file_get_contents_curl($APIurl2."sendMessage?token=".$token2."&chatId=".$chatIdEncerrar."&body=".$text);
