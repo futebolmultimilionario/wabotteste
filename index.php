@@ -13,13 +13,13 @@
 	$chatIdTTJP = "558399711150-1598997654@g.us";
         $chatIdPreJP = "558399711150-1605907495@g.us";
         $chatIdLiveJP = "558399711150-1606661975@g.us";
-        $chatIdPreCG = "558398858522-1568030251@g.us";
+        $chatIdPreCG = "558388774464-1566997018@g.us";
         $chatIdLiveCG = "558396070442-1597839108@g.us";
         $chatIdGalgosUKJP = "558399711150-1583892552@g.us";
         $chatIdGalgosUSAJP = "558399711150-1583854681@g.us";
         $chatIdCariocaJP = "558399711150-1606568529@g.us";
 	$chatIdDiretoria = "558399711150-1583810992@g.us";
-        $chatIdPreRegys = "5511948010386-1552934954@g.us";
+        $chatIdPreRegys = "558399711150@c.us";
         $chatIdLiveRegys = "558399711150@c.us";
         $chatIdGalgosUK = "13132868060-1537971803@g.us";
 	$chatIdGalgosUSA = "558581122630-1578659806@g.us";
@@ -61,12 +61,15 @@
         if ($chatIdAtual == $chatIdPreRegys) {
           if($typeAtual == "chat") {
         	   $dados = file_get_contents_curl($APIurl."sendMessage?token=".$token."&chatId=".$chatIdPreJP."&body=".$text);
+$dados = file_get_contents_curl($APIurl."sendMessage?token=".$token."&chatId=".$chatIdPreCG."&body=".$text);
 		  	    }
           elseif ($typeAtual == "image") {
         	   $dados = file_get_contents_curl($APIurl."sendFile?token=".$token."&chatId=".$chatIdPreJP."&body=".$text."&filename=1554d15f125d.jpg&caption=".$caption);
+$dados = file_get_contents_curl($APIurl."sendFile?token=".$token."&chatId=".$chatIdPreCG."&body=".$text."&filename=1554d15f125d.jpg&caption=".$caption);
         	}
           elseif ($typeAtual == "document" || $typeAtual == "audio") {
         	   $dados = file_get_contents_curl($APIurl."sendFile?token=".$token."&chatId=".$chatIdPreJP."&body=".$text."&filename=1554d15f125d.ogg");
+$dados = file_get_contents_curl($APIurl."sendFile?token=".$token."&chatId=".$chatIdPreCG."&body=".$text."&filename=1554d15f125d.ogg");
         	}
         }
         elseif ($chatIdAtual == $chatIdLiveRegys) {
