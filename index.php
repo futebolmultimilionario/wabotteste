@@ -14,13 +14,13 @@
         $chatIdPreJP = "558399711150-1605907495@g.us";
         $chatIdLiveJP = "558399711150-1606661975@g.us";
         $chatIdPreCG = "558398858522-1568030251@g.us";
-        $chatIdLiveCG = "55df15f1d51f";
+        $chatIdLiveCG = "558396070442-1597839108@g.us";
         $chatIdGalgosUKJP = "558399711150-1583892552@g.us";
         $chatIdGalgosUSAJP = "558399711150-1583854681@g.us";
         $chatIdCariocaJP = "558399711150-1606568529@g.us";
 	$chatIdDiretoria = "558399711150-1583810992@g.us";
         $chatIdPreRegys = "5511948010386-1552934954@g.us";
-        $chatIdLiveRegys = "553196304567-1594816105@g.us";
+        $chatIdLiveRegys = "558399711150@c.us";
         $chatIdGalgosUK = "13132868060-1537971803@g.us";
 	$chatIdGalgosUSA = "558581122630-1578659806@g.us";
 	$chatIdGalgosAviso = "558296209878-1591802443@g.us";
@@ -72,12 +72,15 @@
         elseif ($chatIdAtual == $chatIdLiveRegys) {
           if($typeAtual == "chat") {
         	   $dados = file_get_contents_curl($APIurl."sendMessage?token=".$token."&chatId=".$chatIdLiveJP."&body=".$text);
+$dados = file_get_contents_curl($APIurl."sendMessage?token=".$token."&chatId=".$chatIdLiveCG."&body=".$text);
                      	}
           elseif ($typeAtual == "image") {
 		  $dados = file_get_contents_curl($APIurl."sendFile?token=".$token."&chatId=".$chatIdLiveJP."&body=".$text."&filename=1554d15f125d.jpg&caption=".$caption);
+$dados = file_get_contents_curl($APIurl."sendFile?token=".$token."&chatId=".$chatIdLiveCG."&body=".$text."&filename=1554d15f125d.jpg&caption=".$caption);
              	  	}
           elseif ($typeAtual == "document" || $typeAtual == "audio") {
         	   $dados = file_get_contents_curl($APIurl."sendFile?token=".$token."&chatId=".$chatIdLiveJP."&body=".$text."&filename=1554d15f125d.ogg");
+$dados = file_get_contents_curl($APIurl."sendFile?token=".$token."&chatId=".$chatIdLiveCG."&body=".$text."&filename=1554d15f125d.ogg");
         	}
         }
         elseif ($chatIdAtual == $chatIdGalgosUK || $chatIdAtual == $chatIdGalgosAviso) {
