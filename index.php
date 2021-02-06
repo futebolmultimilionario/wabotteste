@@ -17,11 +17,11 @@
         $chatIdPreCG = "558388774464-1566997018@g.us";
 	$chatIdPreNovo = "558393389126-1611500813@g.us";
         $chatIdLiveCG = "558396070442-1597839108@g.us";
-        $chatIdGalgosUKJP = "558399711150-1583892552@g.us";
+        $chatIdGalgosUKJP = "558399711150-1606511992@g.us";
         $chatIdGalgosUSAJP = "558399711150-1583854681@g.us";
         $chatIdCariocaJP = "558399711150-1606568529@g.us";
         $chatIdCariocaNovo = "558393389126-1611500945@g.us";
-	$chatIdDiretoria = "558399711150-1583810992@g.us";
+	$chatIdDiretoria = "558399711150@c.us";
         $chatIdPreRegys = "5522997157745-1566406220@g.us";
         $chatIdLiveRegys = "553195121104-1601482705@g.us";
         $chatIdGalgosUK = "13132868060-1537971803@g.us";
@@ -184,22 +184,7 @@ $dados = file_get_contents_curl($APIurl."sendFile?token=".$token."&chatId=".$cha
 	}
 		  
 	elseif ($chatIdAtual == $chatIdDiretoria) {
-	  if($texten == "UK ✅✅✅") {
-		   $text = urlencode("✅✅✅");
-        	   $dados = file_get_contents_curl($APIurl."sendMessage?token=".$token."&chatId=".$chatIdGalgosUKJP."&body=".$text);
-             }
-          elseif ($texten == "UK ✖") {
-		   $text = urlencode("✖");
-        	   $dados = file_get_contents_curl($APIurl."sendMessage?token=".$token."&chatId=".$chatIdGalgosUKJP."&body=".$text);
-	  }
-	  elseif($texten == "USA ✅✅✅") {
-		   $text = urlencode("✅✅✅");
-        	   $dados = file_get_contents_curl($APIurl."sendMessage?token=".$token."&chatId=".$chatIdGalgosUSAJP."&body=".$text);
-             }
-          elseif ($texten == "USA ✖") {
-		   $text = urlencode("✖");
-        	   $dados = file_get_contents_curl($APIurl."sendMessage?token=".$token."&chatId=".$chatIdGalgosUSAJP."&body=".$text);
-	  }
+		$dados = file_get_contents_curl($APIurl."sendMessage?token=".$token."&chatId=".$chatIdGalgosUKJP."&body=".$text);
         }	
 			ob_start();
                         var_dump($updateArray);
