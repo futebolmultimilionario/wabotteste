@@ -222,9 +222,4 @@ $dados = file_get_contents_curl($APIurl."sendFile?token=".$token."&chatId=".$cha
 	else {
 		echo "NoCommand";
 	}
-	ob_start();
-                        var_dump($updateArray);
-                        $input = ob_get_contents();
-                        ob_end_clean();
-                        file_put_contents('input_requests.log',$input.PHP_EOL,FILE_APPEND);
 ?>
