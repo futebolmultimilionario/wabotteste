@@ -13,7 +13,7 @@
                 	"Accept: application/json\r\n"
     	)
 	);
-	$url = "https://atualizajogos.herokuapp.com/index.php";
+	$url = "https://ee16e49b5a87.ngrok.io/index.php";
 	$context  = stream_context_create( $options );
 	
 
