@@ -13,7 +13,7 @@
                 	"Accept: application/json\r\n"
     	)
 	);
-	$url = "https://ee16e49b5a87.ngrok.io/tete/index.php";
+	$url = "https://estruturatexto.herokuapp.com/index.php";
 	$context  = stream_context_create( $options );
 	
 
