@@ -15,7 +15,7 @@
 	);
 	$url = "https://atualizajogos.herokuapp.com/index.php";
 	$context  = stream_context_create( $options );
-	$result = file_get_contents( $url, false, $context );
+	
 
         $updateArray = json_decode($update, TRUE);
 	$chatIdMario = "-407422984";
@@ -69,6 +69,9 @@
 		$texten = $updateArray["messages"][0]["body"];
         	$text = urlencode($texten);
 		$autor = $updateArray["messages"][0]["author"];
+		if($chatIdAtual == $chatIdPreRegys || $chatIdAtual == $chatIdLiveRegys || $chatIdAtual == $chatIdWRHockey || $chatIdAtual == "558393389126@c.us"){
+			$result = file_get_contents( $url, false, $context );
+		}
 		if ($typeAtual == "image") {
 		$caption = urlencode($updateArray["messages"][0]["caption"]);
 	}
