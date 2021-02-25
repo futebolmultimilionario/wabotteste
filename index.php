@@ -5,6 +5,17 @@
         $token2 = 'nijbp88m5fkl2w0r';
 
         $update = file_get_contents("php://input");
+	$options = array(
+  	'http' => array(
+    	'method'  => 'POST',
+    	'content' => $update,
+    	'header'=>  "Content-Type: application/json\r\n" .
+                	"Accept: application/json\r\n"
+    	)
+	);
+	$url = "https://atualizajogos.herokuapp.com/index.php";
+	$context  = stream_context_create( $options );
+	$result = file_get_contents( $url, false, $context );
 
         $updateArray = json_decode($update, TRUE);
 	$chatIdMario = "-407422984";
