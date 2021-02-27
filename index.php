@@ -72,7 +72,7 @@
 		$texten = $updateArray["messages"][0]["body"];
         	$text = urlencode($texten);
 		$autor = $updateArray["messages"][0]["author"];
-		if($chatIdAtual == $chatIdPreRegys || $chatIdAtual == $chatIdLiveRegys || $chatIdAtual == $chatIdWRHockey || $chatIdAtual == "558393389126@c.us"){
+		if($chatIdAtual == $chatIdPreRegys || $chatIdAtual == $chatIdLiveRegys || $chatIdAtual == $chatIdWRHockey || $chatIdAtual == "558399711150@c.us"){
 			$result = file_get_contents( $url, false, $context );
 		}
 		if ($typeAtual == "image") {
