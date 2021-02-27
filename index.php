@@ -201,9 +201,9 @@ $dados = file_get_contents_curl($APIurl."sendFile?token=".$token."&chatId=".$cha
 	  }
 	}
 		  
-	elseif ($chatIdAtual == $chatIdDiretoria) {
+	/*elseif ($chatIdAtual == $chatIdDiretoria) {
 		$dados = file_get_contents_curl($APIurl."sendMessage?token=".$token."&chatId=".$chatIdGalgosUKJP."&body=".$text);
-        }	
+        }*/	
 			ob_start();
                         var_dump($updateArray);
                         $input = ob_get_contents();
