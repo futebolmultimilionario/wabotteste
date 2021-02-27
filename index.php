@@ -3,6 +3,9 @@
         $token = 'nijbp88m5fkl2w0r';
 	$APIurl2 = 'https://eu27.chat-api.com/instance194066/';
         $token2 = 'nijbp88m5fkl2w0r';
+	$APIurl3 = 'https://eu280.chat-api.com/instance233304/';
+        $token3 = '19pljsz9yaaxyq90';
+
 
         $update = file_get_contents("php://input");
 	$options = array(
@@ -80,6 +83,7 @@
         	   $dados = file_get_contents_curl($APIurl."sendMessage?token=".$token."&chatId=".$chatIdPreJP."&body=".$text);
 $dados = file_get_contents_curl($APIurl."sendMessage?token=".$token."&chatId=".$chatIdPreCG."&body=".$text);
 		  $dados = file_get_contents_curl($APIurl."sendMessage?token=".$token."&chatId=".$chatIdPreNovo."&body=".$text);
+		  $dados = file_get_contents_curl($APIurl3."sendMessage?token=".$token3."&chatId=558399711150@c.us&body=".$text);
 		  	    }
           elseif ($typeAtual == "image") {
         	   $dados = file_get_contents_curl($APIurl."sendFile?token=".$token."&chatId=".$chatIdPreJP."&body=".$text."&filename=1554d15f125d.jpg&caption=".$caption);
