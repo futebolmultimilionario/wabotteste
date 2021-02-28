@@ -80,16 +80,12 @@
 	}
         if ($chatIdAtual == $chatIdPreRegys) {
           if($typeAtual == "chat") {
-        	   $dados = file_get_contents_curl($APIurl."sendMessage?token=".$token."&chatId=".$chatIdPreJP."&body=".$text);
 		  $dados = file_get_contents_curl($APIurl."sendMessage?token=".$token."&chatId=".$chatIdPreNovo."&body=".$text);
-		  $dados = file_get_contents_curl($APIurl3."sendMessage?token=".$token3."&chatId=558399711150@c.us&body=".$text);
 		  	    }
           elseif ($typeAtual == "image") {
-        	   $dados = file_get_contents_curl($APIurl."sendFile?token=".$token."&chatId=".$chatIdPreJP."&body=".$text."&filename=1554d15f125d.jpg&caption=".$caption);
 		  $dados = file_get_contents_curl($APIurl."sendFile?token=".$token."&chatId=".$chatIdPreNovo."&body=".$text."&filename=1554d15f125d.jpg&caption=".$caption);
         	}
           elseif ($typeAtual == "document" || $typeAtual == "audio") {
-        	   $dados = file_get_contents_curl($APIurl."sendFile?token=".$token."&chatId=".$chatIdPreJP."&body=".$text."&filename=1554d15f125d.ogg");
 		  $dados = file_get_contents_curl($APIurl."sendFile?token=".$token."&chatId=".$chatIdPreNovo."&body=".$text."&filename=1554d15f125d.ogg");
         	}
         }
