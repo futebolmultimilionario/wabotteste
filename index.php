@@ -92,17 +92,14 @@
         elseif ($chatIdAtual == $chatIdLiveRegys) {
           if($typeAtual == "chat") {
         	   $dados = file_get_contents_curl($APIurl."sendMessage?token=".$token."&chatId=".$chatIdLiveJP."&body=".$text);
-$dados = file_get_contents_curl($APIurl."sendMessage?token=".$token."&chatId=".$chatIdLiveCG."&body=".$text);
 		  $dados = file_get_contents_curl($APIurl."sendMessage?token=".$token."&chatId=".$chatIdLiveNovo."&body=".$text);
                      	}
           elseif ($typeAtual == "image") {
 		  $dados = file_get_contents_curl($APIurl."sendFile?token=".$token."&chatId=".$chatIdLiveJP."&body=".$text."&filename=1554d15f125d.jpg&caption=".$caption);
-$dados = file_get_contents_curl($APIurl."sendFile?token=".$token."&chatId=".$chatIdLiveCG."&body=".$text."&filename=1554d15f125d.jpg&caption=".$caption);
 		  $dados = file_get_contents_curl($APIurl."sendFile?token=".$token."&chatId=".$chatIdLiveNovo."&body=".$text."&filename=1554d15f125d.jpg&caption=".$caption);
              	  	}
           elseif ($typeAtual == "document" || $typeAtual == "audio") {
         	   $dados = file_get_contents_curl($APIurl."sendFile?token=".$token."&chatId=".$chatIdLiveJP."&body=".$text."&filename=1554d15f125d.ogg");
-$dados = file_get_contents_curl($APIurl."sendFile?token=".$token."&chatId=".$chatIdLiveCG."&body=".$text."&filename=1554d15f125d.ogg");
 		  $dados = file_get_contents_curl($APIurl."sendFile?token=".$token."&chatId=".$chatIdLiveNovo."&body=".$text."&filename=1554d15f125d.ogg");
         	}
         }
