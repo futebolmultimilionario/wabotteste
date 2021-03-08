@@ -14,7 +14,7 @@
     $options = array(
         'http' => array(
           'method'  => 'POST',
-          'content' => $requisicao,
+          'content' => $requisicaocod,
           'header'=>  "Content-Type: application/json\r\n" .
                       "Accept: application/json\r\n"
           )
