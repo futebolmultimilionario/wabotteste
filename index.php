@@ -20,6 +20,7 @@
           )
       );
     $url = "https://estruturatexto.herokuapp.com/index.php";
+    $url2 = "https://bf1fde1a3f7f.ngrok.io/tete/index.php";
     $context  = stream_context_create($options);
     //Variável do Id dos grupos
 	$arrayGrupos = array("5522997157745-1566406220@g.us"=>"558393389126-1611500813@g.us",
@@ -39,6 +40,7 @@
     //Verifica se o remetente é um dos inclusos para o repassa e envia ao outro webhook
     if(array_key_exists($remetente, $arrayGrupos)){
         file_get_contents($url, false, $context);
+	file_get_contents($url2, false, $context);
     }
     //Repassa mensagem
     $dados = file_get_contents($APIurl.$arrayMetodo[$formato]."?token=".$token."&chatId=".$arrayGrupos[$remetente]."&body=".$texto.$arrayFormato[$formato].$legenda);
