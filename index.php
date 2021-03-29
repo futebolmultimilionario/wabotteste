@@ -10,23 +10,17 @@
     $remetente = $requisicao["messages"][0]["chatId"];
     $formato = $requisicao["messages"][0]["type"];
     $legenda = urlencode($requisicao["messages"][0]["caption"]);
-    //Variáveis do envio ao outro WebHook
-    $options = array(
-        'http' => array(
-          'method'  => 'POST',
-          'content' => $requisicaocod,
-          'header'=>  "Content-Type: application/json\r\n" .
-                      "Accept: application/json\r\n"
-          )
-      );
-    $url = "https://estruturatexto.herokuapp.com/index.php";
-    $context  = stream_context_create($options);
     //Variável do Id dos grupos
     $arrayGrupos = array("5522997157745-1566406220@g.us"=>"558393389126-1611500813@g.us",
                          "553195121104-1601482705@g.us"=>"558393389126-1611500858@g.us",
                          "558182315715-1594862914@g.us"=>"558393389126-1611500920@g.us",
                          "5521976937491-1563408342@g.us"=>"558393389126-1611500945@g.us",
-			 "558393389126@c.us"=>"558399711150@c.us");
+			 "558393389126@c.us"=>"558399711150@c.us",
+			 "5522999380564@c.us"=>"558399711150@c.us",
+			 "5511964529689@c.us"=>"558399711150@c.us",
+			 "5521989117219@c.us"=>"558399711150@c.us",
+			 "5522998194725@c.us"=>"558399711150@c.us",
+			 "558198581691@c.us"=>"558399711150@c.us");
     //Variável do metodo da mensagem
     $arrayMetodo = array("chat"=>"sendMessage",
                          "image"=>"sendFile",
@@ -37,10 +31,6 @@
                           "image"=>"&filename=imagem.jpg&caption=",
                           "audio"=>"&filename=audio.oga",
                           "document"=>"&filename=documento.pdf");
-    //Verifica se o remetente é um dos inclusos para o repassa e envia ao outro webhook
-    if(array_key_exists($remetente, $arrayGrupos)){
-        file_get_contents($url, false, $context);
-    }
     //Repassa mensagem
     $dados = file_get_contents($APIurl.$arrayMetodo[$formato]."?token=".$token."&chatId=".$arrayGrupos[$remetente]."&body=".$texto.$arrayFormato[$formato].$legenda);
 
