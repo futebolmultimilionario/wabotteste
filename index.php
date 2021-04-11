@@ -75,7 +75,8 @@
         $cp_token = $response['access_token'];
         
     // Print all headers as array
-    $tip_id = substr("$match[0][0]", strripos("$match[0][0]", "/") + 1, strlen("$match[0][0]")-strripos("$match[0][0]", "/"));
+    $tip_link = $match[0][0];
+    $tip_id = substr("$tip_link", strripos("$tip_link", "/") + 1, strlen("$tip_link")-strripos("$tip_link", "/"));
     //file_get_contents($APIurl."sendMessage?token=".$token."&chatId=558399711150@c.us&body=".$tip_id);
 
 $curl = curl_init();
