@@ -37,7 +37,7 @@
     $texto_cod = $requisicao["messages"][0]["body"];
     preg_match_all('#\bhttps?://[^,\s()<>]+(?:\([\w\d]+\)|([^,[:punct:]\s]|/))#', $texto_cod, $match);
 
-    if(array_key_exists(0, $match[0]) && $remetente == "558393389126@c.us"){
+    if(array_key_exists(0, $match[0]) && $remetente == "553195121104-1601482705@g.us"){
 
         $curl = curl_init();
         
@@ -112,9 +112,9 @@ curl_setopt_array($curl, array(
   print_r($response);
   curl_close($curl);
   if($response['result']['cover'] == ''){
-    $dados = file_get_contents($APIurl."sendMessage?token=".$token."&chatId=558399711150@c.us&body=".urlencode(html_entity_decode(strip_tags($response['result']['body']), ENT_QUOTES, 'UTF-8')));
+    $dados = file_get_contents($APIurl."sendMessage?token=".$token."&chatId=558393389126-1611500858@g.us&body=".urlencode(html_entity_decode(strip_tags($response['result']['body']), ENT_QUOTES, 'UTF-8')));
   } else {
-    $dados = file_get_contents($APIurl."sendFile?token=".$token."&chatId=558399711150@c.us&body=".urlencode($response['result']['cover']['url'])."&filename=imagem.png&caption=".urlencode(html_entity_decode(strip_tags($response['result']['body']), ENT_QUOTES, 'UTF-8')));
+    $dados = file_get_contents($APIurl."sendFile?token=".$token."&chatId=558393389126-1611500858@g.us&body=".urlencode($response['result']['cover']['url'])."&filename=imagem.png&caption=".urlencode(html_entity_decode(strip_tags($response['result']['body']), ENT_QUOTES, 'UTF-8')));
   }}
 
 
