@@ -114,7 +114,7 @@ curl_setopt_array($curl, array(
   if($response['result']['cover'] == ''){
     $dados = file_get_contents($APIurl."sendMessage?token=".$token."&chatId=558399711150@c.us&body=".urlencode(html_entity_decode(strip_tags($response['result']['body']), ENT_QUOTES, 'UTF-8')));
   } else {
-    $dados = file_get_contents($APIurl."sendFile?token=".$token."&chatId=558399711150@c.us.us&body=".urlencode($response['result']['cover']['url'])."&filename=imagem.png&caption=".urlencode(html_entity_decode(strip_tags($response['result']['body']), ENT_QUOTES, 'UTF-8')));
+    $dados = file_get_contents($APIurl."sendFile?token=".$token."&chatId=558399711150@c.us&body=".urlencode($response['result']['cover']['url'])."&filename=imagem.png&caption=".urlencode(html_entity_decode(strip_tags($response['result']['body']), ENT_QUOTES, 'UTF-8')));
   }}
 
 
