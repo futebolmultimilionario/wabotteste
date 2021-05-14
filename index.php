@@ -32,10 +32,25 @@
                           "audio"=>"&filename=audio.oga",
                           "document"=>"&filename=documento.pdf");
     //Repassa mensagem
+    $arrayGrupostg = array("5522997157745-1566406220@g.us"=>"-100555360917");
+    $arrayMetodotg = array("chat"=>"sendMessage",
+                           "image"=>"sendPhoto",
+                           "audio"=>"sendAudio",
+                           "document"=>"sendDocument");
+    $arrayTexto = array("chat"=>"&text=",
+			"image"=>"&photo=",
+			"audio"=>"&audio=",
+			"document"=>"&document=");
+
+    $arrayFormatotg = array("chat"=>"",
+			    "image"=>"&caption=",
+			    "audio"=>"",
+			    "document"=>"&caption=");
 	
 	foreach($arrayGrupos[$remetente] as $contato){
     $dados = file_get_contents($APIurl.$arrayMetodo[$formato]."?token=".$token."&chatId=".$contato."&body=".$texto.$arrayFormato[$formato].$legenda);
 	}
+	file_get_contents("https://api.telegram.org/bot".$tgtoken."/".$arrayMetodotg[$formato]."?chat_id=".$arrayGrupostg[$remetente].$arrayTexto[$formato].$arrayFormatotg[$formato];
     
 
 
