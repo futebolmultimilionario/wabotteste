@@ -33,7 +33,7 @@
                           "audio"=>"&filename=audio.oga",
                           "document"=>"&filename=documento.pdf");
     //Repassa mensagem
-    $arrayGrupostg = array("5522997157745-1566406220@g.us"=>"-100555360917");
+    $arrayGrupostg = array("5522997157745-1566406220@g.us"=>"-1001351914435");
     $arrayMetodotg = array("chat"=>"sendMessage",
                            "image"=>"sendPhoto",
                            "audio"=>"sendAudio",
