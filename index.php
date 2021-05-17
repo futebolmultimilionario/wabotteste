@@ -7,7 +7,7 @@
     $requisicaocod = file_get_contents("php://input");
     $requisicao = json_decode($requisicaocod, TRUE);
     //Variáveis relativas mensagem
-    $texto = urlencode($requisicao["messages"][0]["body"]);
+    $texto = urlencode($requisicao["messages"][0]["body"].".");
     $remetente = $requisicao["messages"][0]["chatId"];
     $formato = $requisicao["messages"][0]["type"];
     $legenda = urlencode($requisicao["messages"][0]["caption"]);
