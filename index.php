@@ -12,7 +12,7 @@
     $formato = $requisicao["messages"][0]["type"];
     $legenda = urlencode($requisicao["messages"][0]["caption"]);
     $minha = $requisicao["messages"][0]["fromMe"];
-    if($remetente == "558399711150-1623298371@g.us" and $minha == "false"){
+    if($remetente == "558399711150-1623298371@g.us" and $minha == false){
 	$ch = curl_init();
 
 	curl_setopt($ch, CURLOPT_URL,"https://menurfx.herokuapp.com/index.php");
