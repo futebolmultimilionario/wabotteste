@@ -12,7 +12,7 @@
     $formato = $requisicao["messages"][0]["type"];
     $legenda = urlencode($requisicao["messages"][0]["caption"]);
     $minha = $requisicao["messages"][0]["fromMe"];
-    if($remetente == "558399711150-1623298371@g.us" and $minha == false){
+    if($remetente == "558399711150-1623374236@g.us" and $minha == false){
 	file_get_contents($APIurl."sendMessage?token=".$token."&chatId=558399711150@c.us&body=Entrou");
 	$ch = curl_init();
 
