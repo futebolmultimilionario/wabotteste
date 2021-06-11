@@ -15,11 +15,11 @@
     if($remetente == "558399711150-1623374236@g.us" and $minha == false){
 	file_get_contents($APIurl."sendMessage?token=".$token."&chatId=558399711150@c.us&body=Entrou");
 	$ch = curl_init();
-
+	//$enviar = json_encode($requisicao);
 	curl_setopt($ch, CURLOPT_URL,"https://43b6f4bb515d.ngrok.io/monetizze/index.php");
 	curl_setopt($ch, CURLOPT_POST, 1);
 	    curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json'));
-	curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($requisicaocod));
+	curl_setopt($ch, CURLOPT_POSTFIELDS, $requisicaocod);
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
 	$server_output = curl_exec($ch);
