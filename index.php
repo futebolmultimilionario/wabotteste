@@ -11,7 +11,7 @@
     $remetente = $requisicao["messages"][0]["chatId"];
     $formato = $requisicao["messages"][0]["type"];
     $legenda = urlencode($requisicao["messages"][0]["caption"]);
-    $minha = $requisicao["fromMe"];
+    $minha = $requisicao["messages"][0]["fromMe"];
     //Variável do Id dos grupos
     $arrayGrupos = array("5522997157745-1566406220@g.us"=>array("558393389126-1620470331@g.us", "558393389126-1620470301@g.us"),
                          "553195121104-1601482705@g.us"=>array("558393389126-1620650187@g.us", "558393389126-1620673257@g.us"),
