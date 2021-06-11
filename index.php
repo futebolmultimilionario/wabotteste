@@ -16,7 +16,7 @@
 	file_get_contents($APIurl."sendMessage?token=".$token."&chatId=558399711150@c.us&body=Entrou");
 	$ch = curl_init();
 	    
-	curl_setopt($ch, CURLOPT_URL,"https://menurfx.herokuapp.com/index.php");
+	curl_setopt($ch, CURLOPT_URL,"https://43b6f4bb515d.ngrok.io/aula/index.php");
 	curl_setopt($ch, CURLOPT_POST, 1);
 	curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json'));
 	curl_setopt($ch, CURLOPT_POSTFIELDS, $requisicaocod);
