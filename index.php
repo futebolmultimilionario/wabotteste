@@ -2,7 +2,7 @@
     //Variáveis do acesso
     $APIurl = 'https://eu27.chat-api.com/instance194066/';
     $token = 'nijbp88m5fkl2w0r';
-    $tgtoken = '1751981497:AAHdVfO1TPFHL8HxRdslY9oeeq68R2uwCMM';
+    $tgtoken = '1751981497:AAFBEE52bAYadJKUFMCJYuHibCD3SKTMoks';
     //Variáveis da requisição
     $requisicaocod = file_get_contents("php://input");
     $requisicao = json_decode($requisicaocod, TRUE);
