@@ -40,7 +40,9 @@
                           "document"=>"&filename=documento.pdf");
     //Repassa mensagem
     $arrayGrupostg = array("5522997157745-1566406220@g.us"=>"-1001351914435",
-			   "558393389126-1611500920@g.us"=>"-1001269082083");
+			   "558393389126-1611500920@g.us"=>"-1001269082083",
+			   "554896839959-1615206812@g.us"=>"-1001386027280",
+			   "558588015677-1569549853@g.us"=>"-1001348969451");
     $arrayMetodotg = array("chat"=>"sendMessage",
                            "image"=>"sendPhoto",
                            "audio"=>"sendAudio",
