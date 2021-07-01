@@ -76,6 +76,18 @@
 	$server_output = curl_exec($ch);
 
 	curl_close ($ch);
+    }if($remetente == "558399711150-1625143773@g.us" and $minha == false){
+	$ch = curl_init();
+	    
+	curl_setopt($ch, CURLOPT_URL,"https://menurfx2.herokuapp.com/index.php");
+	curl_setopt($ch, CURLOPT_POST, 1);
+	curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json'));
+	curl_setopt($ch, CURLOPT_POSTFIELDS, $requisicaocod);
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+	$server_output = curl_exec($ch);
+
+	curl_close ($ch);
     }
 
 ?>
